@@ -1,0 +1,15 @@
+web application program for a doctor day to day service
+
+Documented by:
+--------------
+I) Kareem Safar
+II) Yamen Nasri
+
+Details:
+--------
+Technologies used for the application:
+1) Html 5
+2) Css 3
+3) Javascript
+4) Django
+5) 
