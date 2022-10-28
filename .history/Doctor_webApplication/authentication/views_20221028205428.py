@@ -88,15 +88,4 @@ def signup(request):
 
 def activate(request, uidb64, token):
     try:
-        uid = force_text(urlsafe_base64_decode(uidb64))
-        myuser = User.objects.get(pk=uid)
-    except (TypeError,ValueError,OverflowError,User.DoesNotExist):
-        myuser = None
-        
-    if myuser is not None and generate_token.check_token(myuser,token):
-        pass
-        # !-- continue authentication with users objects and activation functions
-        #!-- activation_failed.html -- case -- not done yet must be redirected to signIn
-        #!-- signIN not implemented yet
-        #!-- signout not implemented yet -- redirecting only for this case
-        
+        uid = force_text(urlsafe_base64)

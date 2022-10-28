@@ -98,5 +98,4 @@ def activate(request, uidb64, token):
         # !-- continue authentication with users objects and activation functions
         #!-- activation_failed.html -- case -- not done yet must be redirected to signIn
         #!-- signIN not implemented yet
-        #!-- signout not implemented yet -- redirecting only for this case
-        
+        #!-- signout
