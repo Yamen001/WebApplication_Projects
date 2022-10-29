@@ -102,24 +102,4 @@ def activate(request, uidb64, token):
     else:
         return render(request, 'activation_failed.html')
     
-def signin(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        pass1 = request.POST['pass1']
-        
-        user = authenticate(username = username, password = pass1)
-        
-        if user is not None:
-            login(request, user)
-            fname = user.first_name
-            return render(request, 'authentication/index.html', {'fname': fname})
-        else:
-            messages.error(request,"Wrong ")
-            return redirect('home')
-    return render(request, 'authentication/sigin.html')
-
-
-def signout(request):
-    logout(request)
-    messages.success(request, 'logged out successfully')
-    return redirect('home')
+    

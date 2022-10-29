@@ -116,10 +116,4 @@ def signin(request):
         else:
             messages.error(request,"Wrong ")
             return redirect('home')
-    return render(request, 'authentication/sigin.html')
-
-
-def signout(request):
-    logout(request)
-    messages.success(request, 'logged out successfully')
-    return redirect('home')
+    return render(request, 'authentication/index.html)

@@ -121,5 +121,4 @@ def signin(request):
 
 def signout(request):
     logout(request)
-    messages.success(request, 'logged out successfully')
-    return redirect('home')
+    messages.success(request, 'logged out success')
