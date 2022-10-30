@@ -18,7 +18,8 @@ def submit_form(request):
         msg = "Form submitted successfully"
         return render(request,"main.html",{"msg" : msg}) #! if success redirect to main page
     else:
-        return HttpResponse("404 - Not Found") #! debugging not started -- if user didnt fill all redirected to main.html ( WRONG )
+        return HttpResponse("404 - Not Found") #! debugging not started -- if user didnt fill all redirected to main.html ( )
+    
 def logout(request):
     logout(request)
     return render(request,"logout.html")

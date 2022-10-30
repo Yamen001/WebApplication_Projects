@@ -7,7 +7,6 @@ urlpatterns = [
     # path('login/', views.signin),
      #! implemented but not been tested yet!!!
     # path('logout/', views.logout),
-     #! not implemented yet
     # path('signup/', views.signup),
 ]
 #! MAPPING IS NOT DONE YET.. DO NOT TOUCH THIS FILE

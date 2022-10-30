@@ -17,14 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #! register url mapping is working.. from initial server run
-    path('', include('register.urls')),
-     #! main url mapping is working.. from url pattern
-     #! NOTE: main.html is not the main website.. its the signup form
-    path('main/', include('main.urls')),
-    #! index url mapping is working.. from url pattern
-    path('index/', include('main.urls')),
-
+    path('', include('register.urls')), # SignIn pag
+    path('', include('main.urls')
     ]
 
 #! MAPPING IS NOT DONE YET.. DO NOT TOUCH THIS FILE

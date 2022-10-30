@@ -16,9 +16,10 @@ def submit_form(request):
         Gender = request.POST['Gender']
         Register(First_Name=First_Name, Last_Name=Last_Name)
         msg = "Form submitted successfully"
-        return render(request,"main.html",{"msg" : msg}) #! if success redirect to main page
+        return render(request,"main.html",{"msg" : msg}) 
     else:
-        return HttpResponse("404 - Not Found") #! debugging not started -- if user didnt fill all redirected to main.html ( WRONG )
+        return HttpResponse("404 - Not Found")
+    
 def logout(request):
     logout(request)
     return render(request,"logout.html")

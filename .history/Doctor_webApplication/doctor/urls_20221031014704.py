@@ -22,8 +22,7 @@ urlpatterns = [
      #! main url mapping is working.. from url pattern
      #! NOTE: main.html is not the main website.. its the signup form
     path('main/', include('main.urls')),
-    #! index url mapping is working.. from url pattern
-    path('index/', include('main.urls')),
+    path('main/', include('main.urls')),
 
     ]
 
