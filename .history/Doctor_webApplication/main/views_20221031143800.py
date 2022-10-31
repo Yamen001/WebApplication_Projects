@@ -10,5 +10,5 @@ def index(request):
 #     text = text()
 #     text.name = ""
 #     text.sub_title =
-#     text.description = 
+#     text.description = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum fugit est omnis ut cum vel libero accusantium necessitatibus placeat, assumenda consequuntur dicta tempore iusto et"
 #     return render(request, 'main.html', {'text': text})
