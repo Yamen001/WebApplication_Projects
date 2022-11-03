@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SignIn Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id = "1stDiv">
+            <h1>SignIn Form </h1>
+            <div id = "2ndDiv">
+                <form action = "/new_member/" method="POST">
+                    {% csrf_token %}
+                    <h4 id = "username">Username
+                        <input type="text" name="username">
+                    </h4>
+                    <h4 id="password">Password
+                        <input type="text" name="password">
+                    </h4>
+                    <h4 id="phone_number">Phone Number
+                        <input type="text" name="phone_number">
+                    </h4>
+                    <h4 id="Gen">Gender <br>
+                        Male
+                        <input type="radio" value="MALE" name="gender">
+                        Female
+                        <input type="radio" value="FEMALE" name="gender">
+                    </h4>
+                    <button type = "submit">Save</button>
+                </form>
+        <script src="" async defer></script>
+    </body>
+</html>
