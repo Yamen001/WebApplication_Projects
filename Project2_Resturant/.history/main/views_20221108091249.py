@@ -4,4 +4,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello from views where main appliation is!")
+    return HttpRespons
+    )
