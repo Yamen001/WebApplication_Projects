@@ -81,7 +81,6 @@ DATABASES = {
         "NAME": 'Resturantdb',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'localhost',
     }
 }
 
