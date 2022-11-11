@@ -1,25 +1,22 @@
-web application program for a doctor day to day service
-
-!Documented by:
----------------
-I) Kareem Safar
-II) Yamen Nasri
-
-!Technologies used for the application:
----------------------------------------
-1) Html 5
-2) Css 3
-3) Javascript
-4) Django
-5) PostgressDB
-
-!Details:
----------
-
-- doctor directory will be our main container for this application where it maps with
-its urls to all web pages in the application.
-
-- main directory is our application folder where it hold all the web pages that will be displayed to the doctor & the user
+to link html with css in html files write the following:
+--------------------------------------------------------
 
 
-?main/templates --> will host all of our static files that is ( html - css - js )
+I) on top of the html file write:
+{% load static %}
+
+II) to actually link the css styling:
+
+<link rel="stylesheet" href = {% static 'css/main.css' %}
+
+And your done!
+
+----------------
+
+Note: linking js files and images is the same as well
+
+example for images:
+
+<img src = {% static 'img/images.jpg' %}
+
+Note: you must include {% load static %} here as well
