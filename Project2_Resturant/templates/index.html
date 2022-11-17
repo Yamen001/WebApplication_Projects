@@ -10,90 +10,135 @@
         <title>Home Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/css/base.css">
+        <link rel="stylesheet" href="/static/css/test.css">
+        <!-- bootstrap link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+        <!-- AOS library for the animation while scrolling -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
-<body>
-    <div class="fixed-order-button">
+
+    
+    <body>
+    <!-- <div class="fixed-order-button">
         <a href="#">icon</a>
-    </div>
-    <nav>
-        <div class="container">
-            <h2>logo</h2>
-            <ul class="nav-List">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Chefs</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            {% if user.is_authenticated %}
-            <li> Hello, {{user.first_name}}</li>
-            <a href="accounts/logout">logout</a>
-            {% else %}
-                <a href="accounts/login">Log in</a>
-                <a href="accounts/register">Sign up</a>
-                {% endif%}
+        </div> -->
+
+        <nav class="navbar navbar-expand-md px-5 py-0 position-fixed top-0 w-100 text-white">
+            <div class="container-fluid">
+                <img src="/static/imgs/logo2.png" class=" navbar-brand me-5" alt="">
+                <!-- <a class="navbar-brand me-5" href="#"></a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse text-white" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5">
+                        <li class="nav-item align-self-center">
+                            <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item align-self-center">
+                            <a class="nav-link text-white" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item align-self-center">
+                            <a class="nav-link text-white" href="#">Chefs</a>
+                        </li>
+                        <li class="nav-item align-self-center">
+                            <a class="nav-link text-white" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-center">
+                        {% if user.is_authenticated %}
+                        <li class="me-2 list-unstyled">{{user.first_name}}</li>
+                        <a href="accounts/logout">logout</a>
+                        {% else %}
+                            <a href="accounts/login">Log in</a>
+                            <a href="accounts/register">Sign up</a>
+                            {% endif%}
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- start of landing section -->
+        <div class="landing d-flex align-items-center ">
+            <div class="container text-white">
+                <div class="row align-items-center justify-content-center gap-sm-3 gap-5">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="intro-text text-center text-md-start">
+                            <h1>Good food Good Mood</h1>
+                            <h1 class="display-1 fw-light">Super Delicous foods</h1>
+                            <p></p>
+                            <a class="button Landing-order" href="#">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 text-center"   >
+                        <img src="/static/imgs/landingfood1.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
+        <!-- end of landing section -->
 
-    <!-- start of landing section -->
-    <div class="landing">
-        <div class="container">
-            <!-- what ever in here -->
-            <!--  -->
-            <!--  -->
-            <!--  -->
-            <!--  -->
-            <a class="button Landing-order" href="#">Order Now</a>
+
+        <!-- start of Simple food menu section -->
+        <div class="simple-menu">
+            <div class="container">
+                <!-- what ever in here -->
+                <!--  -->
+                <!--  -->
+                <!--  -->
+                <!--  -->
+                <a class="button Menu-order" href="#">See More</a>
+            </div>
         </div>
-    </div>
-    <!-- end of landing section -->
+        <!-- end of simple food menu section -->
 
 
-    <!-- start of Simple food menu section -->
-    <div class="simple-menu">
-        <div class="container">
-            <!-- what ever in here -->
-            <!--  -->
-            <!--  -->
-            <!--  -->
-            <!--  -->
-            <a class="button Menu-order" href="#">See More</a>
+
+        <!-- start of Reverstion section -->
+        <div class="simple-menu">
+            <div class="container">
+                <!-- what ever in here -->
+                <!--  -->
+                <!--  -->
+                <!--  -->
+                <!--  -->
+                <a class="button book-now" href="#">Book Now</a>
+            </div>
         </div>
-    </div>
-    <!-- end of simple food menu section -->
-
-
-
-    <!-- start of Reverstion section -->
-    <div class="simple-menu">
-        <div class="container">
-            <!-- what ever in here -->
-            <!--  -->
-            <!--  -->
-            <!--  -->
-            <!--  -->
-            <a class="button book-now" href="#">Book Now</a>
+        <!-- end of Reverstion section -->
+        <!-- start of About Us section -->
+        <div class="simple-menu">
+            <div class="container">
+                <!-- what ever in here -->
+                <!--  -->
+                <!--  -->
+                <!--  -->
+                <!--  -->
+                <a class="button About-us" href="#">See More</a>
+            </div>
         </div>
-    </div>
-    <!-- end of Reverstion section -->
-    <!-- start of About Us section -->
-    <div class="simple-menu">
-        <div class="container">
-            <!-- what ever in here -->
-            <!--  -->
-            <!--  -->
-            <!--  -->
-            <!--  -->
-            <a class="button About-us" href="#">See More</a>
-        </div>
-    </div>
-    <!-- end of About Us section -->
+        <!-- end of About Us section -->
 
 
-    <!-- note ya kareem ....Landing button , simple food menu button and fixed buuton.... takes you to the same page which -->
-    <!-- it is the menu & order page -->
+        <!-- note ya kareem ....Landing button , simple food menu button and fixed buuton.... takes you to the same page which -->
+        <!-- it is the menu & order page -->
 
-    <!-- and book Now button ...it has no work in backend (static) -->
+        <!-- and book Now button ...it has no work in backend (static) -->
 
-</body>
+    </body>
+    <!-- bootstrap js calling -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- index.js -->
+    <script src="/static/js/index.js"></script>
+<!-- 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000 ,
+            once : 
+        });
+    </script> -->
+    <!-- data-aos="fade-down" data-aos-once="false" data-aos-duration="000" -->
 </html>
