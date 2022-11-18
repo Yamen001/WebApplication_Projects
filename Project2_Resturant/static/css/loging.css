@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 2px solid red; */
+}
+body{
+    position: relative;    
+    height: 100vh;
+    background-image: url(/static/imgs/reverstion1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body::before{
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.392);
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.815);
+    max-width: 500px;
+    width: 100%;
+    height: 570px;
+    z-index: 1;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    position: relative;
+}
+.container h1{
+    font-family: 'Cookie', cursive;
+    color: orange;
+    font-size: 4rem;
+    font-weight: lighter;
+}
+.container h3{
+    color: white;
+    text-transform: capitalize;
+    margin: 20px 0 0;
+    font-size: 1.9rem;
+}
+.container form .row{
+    text-align: start;
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.container form span{
+    /* color: orange; */
+}
+.container form .row input{
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 9px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    transition: .5s ease;
+}
+.container form .row input:focus,
+.container form .row input:hover{
+    border: 1px solid orange;
+    background-color: transparent;
+
+}
+.container form .Lastrow{
+    text-align: start;
+}
+.container form .Lastrow input{
+    width: 100px;
+    font-size: .9rem;
+    color: orange;
+    background-color: transparent;
+    border: 1px solid orange;
+    transition: .5s ease;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    padding: 10px 15px;
+}
+.container form .Lastrow input:hover{
+    color: white;
+    background-color: orange;
+}
+.container form  a{
+    text-decoration: none;
+    color: white;
+    font-size:.8rem;
+}
+#invalid-password{
+    color: orange;
+    font-size: 1.5rem;
+    margin: 10px 0;
+
+}
+.container ul{
+    background-color: red;
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+}

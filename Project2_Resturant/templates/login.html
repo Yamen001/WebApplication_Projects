@@ -6,19 +6,44 @@
         <title>Login</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="/static/css/loging.css">
+                <!-- specail title fontfamily -->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
     </head>
     <body>
-        <form action = "login" method = "POST">
-            {% csrf_token %}
-            <input type = "text" name = "username" placeholder = "username"><br>
-            <input type = "text" name = "password" placeholder = "password"><br>
-            <input type = "submit">
+        <div class="container">
+            <h1 class="food-name">
+                Burgertory
+            </h1>
+            <h3>logIn</h3>
+            <form action = "login" method = "POST">
+                {% csrf_token %}
+                <div class="row">
+                    <span class="username">Username :</span>
+                    <input type = "text" name = "username" required maxlength="10"  placeholder = "username"><br>
+                </div>
+                <div class="row">
+                    <span class="password">password :</span>
+                    <input type = "text" name = "password" required placeholder = "password"><br>
+                </div>
+                <div class="Lastrow">
+                    <input type = "submit">
+                    <a href="">Creat an account</a>
+                </div>
+                <div>
+                    {% for message in messages %}
+                    <h5 id="invalid-password"> {{message}} </h5>
+                    {%endfor%}
+                </div>
+                <ul>
+                    <li><a href="">a</a></li>
+                    <li><a href="">a</a></li>
+                    <li><a href="">a</a></li>
+                    <li><a href="">a</a></li>
+                </ul>
+        </div>
     </body>
-    <div>
-        {% for message in messages %}
-        <h3> {{message}} </h3>
-        {%endfor%}
-    </div>
 
 </html>
