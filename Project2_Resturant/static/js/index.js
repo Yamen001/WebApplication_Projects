@@ -1,11 +1,11 @@
 var lastScrollTop;
 navbar = document.querySelector('.navbar');
-console.log(getComputedStyle(navbar).height)
 window.addEventListener('scroll',function(){
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if(scrollTop > lastScrollTop){
         var navbarHight = Number.parseInt(getComputedStyle(navbar).height)
         navbar.style.top= -Number(navbarHight+10)+'px'
+        // close the list too
     }
     else{
     navbar.style.top='0';

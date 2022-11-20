@@ -15,24 +15,23 @@ body{
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: monospace;
 }
 body::before{
     content: "";
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.392);
+    background-color: rgba(0, 0, 0, 0.397);
 }
 .container{
-    background-color: rgba(0, 0, 0, 0.815);
+    background-color: rgba(0, 0, 0, 0.808);
     max-width: 500px;
     width: 100%;
-    height: 570px;
-    z-index: 1;
+    height: 560px;
     text-align: center;
     padding: 20px 30px;
-    border-radius: 10px;
+    border-radius: 20px;
     position: relative;
 }
 .container h1{
@@ -45,23 +44,20 @@ body::before{
     color: white;
     text-transform: capitalize;
     margin: 20px 0 0;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
 }
 .container form .row{
     text-align: start;
     color: white;
     font-size: 1.3rem;
-    margin-bottom: 30px;
-}
-.container form span{
-    /* color: orange; */
+    margin-bottom: 40px;
 }
 .container form .row input{
     padding: 10px 15px;
     font-size: 1.2rem;
     width: 100%;
-    margin-top: 9px;
-    background-color: transparent;
+    margin-top: 12px;
+    background-color: transparent !important;
     border: 1px solid white;
     outline: none;
     color: white;
@@ -70,11 +66,9 @@ body::before{
 .container form .row input:focus,
 .container form .row input:hover{
     border: 1px solid orange;
-    background-color: transparent;
-
 }
 .container form .Lastrow{
-    text-align: start;
+    text-align: center;
 }
 .container form .Lastrow input{
     width: 100px;
@@ -99,16 +93,33 @@ body::before{
 }
 #invalid-password{
     color: orange;
-    font-size: 1.5rem;
-    margin: 10px 0;
+    font-size: 1rem;
+    margin: 30px 0 0;
+    font-weight: 400;
 
 }
 .container ul{
-    background-color: red;
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     gap: 50px;
-    list-style: none;
+}
+.container ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    transition: .5s ease;
+}
+.container ul li:hover a {
+    color: orange;
+    border-color: orange;
 }

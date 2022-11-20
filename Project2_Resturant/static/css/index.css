@@ -33,7 +33,7 @@ h1{
     margin: 0px 0 10px;
 }
 nav{
-    background-color: rgb(204, 99, 0);
+    background-color:black;
     color: black;
     top: 0px;
     transition: .4s ease-in;
@@ -62,9 +62,6 @@ nav .button{
     animation: fade-out;
     animation-duration: 1s;
 }
-
-
-
 /* @keyframes fading {
     0%{
         opacity: 0;

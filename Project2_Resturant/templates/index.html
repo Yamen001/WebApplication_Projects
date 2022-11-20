@@ -27,8 +27,8 @@
         <a href="#">icon</a>
         </div> -->
 
-        <nav class="navbar navbar-expand-md px-5 py-0 position-fixed w-100 text-white">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-dark px-5 py-1 position-fixed w-100 text-white">
+            <div class="container">
                 <img src="/static/imgs/logo4.png" class=" navbar-brand me-5" alt="">
                 <!-- <a class="navbar-brand me-5" href="#"></a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
@@ -50,13 +50,13 @@
                             <a class="nav-link text-white" href="#">Contact Us</a>
                         </li>
                     </ul>
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex align-items-center justify-content-center">
                         {% if user.is_authenticated %}
-                        <li class="me-2 list-unstyled">{{user.first_name}}</li>
-                        <a href="accounts/logout" class="text-decoration-none">logout</a>
+                        <li class="me-3 list-unstyled">{{user.first_name}}</li>
+                        <a href="accounts/logout" class="logout text-decoration-none border-1 border-white btn text-white">logout</a>
                         {% else %}
-                            <a href="accounts/login" class="text-decoration-none me-3 text-white">Log in</a>
-                            <a href="accounts/register" class="text-decoration-none text-white">Sign up</a>
+                            <a href="accounts/login" id="login" class="border-1 border-white btn text-decoration-none me-3 text-white">Log in</a>
+                            <a href="accounts/register" id="signup" class="border-1 border-white btn text-decoration-none text-white">Sign up</a>
                             {% endif%}
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-6 text-center"   >
-                        <img src="/static/imgs/landingfood1.png" alt="">
+                        <img src="/static/imgs/landingfood2.png" alt="">
                     </div>
                 </div>
             </div>
