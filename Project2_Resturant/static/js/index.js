@@ -1,5 +1,5 @@
 var lastScrollTop;
-navbar = document.querySelector('.navbar');
+let navbar = document.querySelector('.navbar');
 window.addEventListener('scroll',function(){
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if(scrollTop > lastScrollTop){
@@ -12,35 +12,23 @@ window.addEventListener('scroll',function(){
     }
     lastScrollTop = scrollTop;
 });
-//     let landingfood = document.querySelector(".landing img")
-// let i =1
-// setInterval(function(){
-//     if(i === 1){
-//         landingfood.src = `/static/imgs/landingfood${i}.png`
-//         landingfood.style.animation = ""
-//         i++
-//     }
-//     else if(i ===2){
-//         landingfood.src = `/static/imgs/landingfood${i}.png`
-//         landingfood.style.animation = ""
-//         i++
-//     }
-//     else{
-//         landingfood.src = `/static/imgs/landingfood${i}.png`
-//         landingfood.style.animation = "fading 2s"
-//         i = 1
-//     }
-// },5000)
-
-// const animationTime = 5000;
-// const transitionTime = 500;
-// function nextImage() {
-    
-//     let img = document.querySelector(".landing img")
-//     img.classList.remove('hidden');
-//     setTimeout(function () {
-//         img.classList.add('hidden');
-//     },animationTime-transitionTime);
-//     img.src=randomize();
-//     setTimeout(nextImage, animationTime);
-// }
+let landingfood = document.querySelector(".landing img")
+let i =1
+setInterval(function(){
+    if(i === 1){
+        landingfood.src = `/static/imgs/landingfood${i}.png`
+        // landingfood.style.animation = ""
+        i++
+    }
+    else if(i ===2){
+        landingfood.src = `/static/imgs/landingfood${i}.png`
+        // landingfood.style.animation = ""
+        i++
+    }
+    else{
+        landingfood.src = `/static/imgs/landingfood${i}.png`
+        // landingfood.style.animation = "fading 2s"
+        i = 1
+    }
+},3000)
+console.log("test")
