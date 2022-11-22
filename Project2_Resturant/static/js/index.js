@@ -30,5 +30,6 @@ setInterval(function(){
         // landingfood.style.animation = "fading 2s"
         i = 1
     }
-},3000)
+},10000)
 console.log("test")
+
