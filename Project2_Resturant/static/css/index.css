@@ -32,8 +32,13 @@ h1{
     color: orange;
     margin: 0px 0 10px;
 }
+.intro-secTitle{
+    color:orange;
+    font-family: 'Cookie', cursive;
+    font-size: 3rem;
+}
 nav{
-    background-color:rgba(129, 52, 8, 0.867);
+    background-color:rgb(129, 52, 8);
     top: 0px;
     transition: .4s ease-in;
     z-index: 100;
@@ -52,14 +57,19 @@ nav .navbar-nav li{
 .landing{
     min-height: 100vh;
     padding: 100px 40px 20px;
-    overflow: hidden;
+}
+.landing .container .img{
+    width: 360px;
+    height: 360px;
+}
+@media (max-width:767px) {
+    .landing .container .img{
+        width: 250px;
+        height: 250px;
+    }
 }
 .landing img{
-    max-width:450px;
     width: 100%;
-    max-height: 450px;
-    height: 100%;
-    /* animation: fading 2s; */
     animation: fade-out;
     animation-duration: 1s;
 }
@@ -85,47 +95,37 @@ nav .navbar-nav li{
     }
 }
 .simple-menu{
-    height: 100vh;
-    background-color: red;
+    padding: 80px 0;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(/static/imgs/simplemanuback.jpg);
+    background-size: cover;
+    background-position: right bottom;
+    /* background-color: white; */
 }
-/* @keyframes fading {
-    0%{
-        opacity: 0;
+.simple-menu .slide-title{
+    background: white;
+    width: fit-content;
+    margin: 0 auto;
+    color: orange;
+    padding: 10px;
+}
+.simple-menu .row .left img{
+    height: 470px;
+    width: 100%;
+    transition: .7s ease;
+}
+@media (max-width:500px) {
+    .simple-menu .row .left img{
+        height: 250px;
     }
-    100%{
-        opacity: 1;
-    }
-} */
-
-/* sticky takes the size...not like fixed out pf the page */
-/* fixd on bootstrap ..on nav put w-100 */
-/* dont always use img-fluil...because its give the full width of the img...if its 900px and i want it 500px
-not a good idea */
-
-
-
-
-/* .some-image {
-    width: 370px;
-    height: 190px;
-
-} */
-
-/* .hidden {
-    animation: fade-out;
-    animation-duration: 1s;
 }
-
-@keyframes fade-in {
-    from {opacity: 0;}
-    to {opacity: 1;}
+.simple-menu .row .left img:hover{
+    transform: scale(1.1);
 }
-
-@keyframes fade-out {
-    from {opacity: 1}
-    to {opacity: 0}
-} */
-
+.simple-menu .price{
+    color: orange;
+}
 @media (max-width:768px) {
     nav .navbar-nav li:hover{
         padding: 0 0 0 40px;
