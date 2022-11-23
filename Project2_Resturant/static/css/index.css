@@ -145,6 +145,7 @@ nav .navbar-nav li{
 .DiscoverStory .row .left .img:first-child{
     background-image: url(/static/imgs/simplemenu21.jpg);
 }
+
 .DiscoverStory .row .left .img:last-child{
     background-image: url(/static/imgs/Discoverimg2.jpg);
     margin-top: 30px;
