@@ -196,131 +196,202 @@ nav .navbar-nav li{
 
 
 .Comments{
-    height: 80vh;
-    position: relative;
-    margin: 50px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 75vh;
+    margin: 90px 0;
     background-image: url(/static/imgs/commentback.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: red;
 }
 .Comments::before{
     content: "";
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.67);
+    background-color: rgba(0, 0, 0, 0.605);
 }
 .commentSection{
-    position: relative;
-    color: white;
     max-width: 700px;
-    width: 100%;
-    margin: 0 auto;
 }
-
+.Comments img{
+    width: 100px;
+}
+.Comments .commentSection{
+    background-color: re;
+    height: 150px;
+}
 .UserDeatils{
-    position: absolute;
     bottom: -40px;
     left: 50%;
     translate:-50% ;
     max-width: 900px;
-    width: 100%;
-    padding: 20px 30px;
+    padding: 40px 30px;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 20px 12px rgba(170, 170, 170, 0.542);
 }
 .bubble{
-    border-radius: 50%;
-    position: absolute;
-    background-color: red;
+    background-size: cover;
+    background-position: center;
 }
-.leftBubbles{
-    left: 20px;
+.Bigbubble{
+    width: 120px;
+    height: 120px;
 }
-.rigthbubbles{
-    right: 20px;
-    background-color: palegoldenrod;
-}
-.Comments .leftBubbles .Bigbubble{
-    animation: rotate1 10s ease-in infinite alternate-reverse;
+.mediumbubble{
+    height:100px;
     width: 100px;
-    height: 100px;
-    top: 20px;
-    left: 20px;
-    background-image: url(/static/imgs/revestionBackground.jpg);
 }
-.Comments .leftBubbles .mediumbubble{
+.smallbubble{
     width: 80px;
     height: 80px;
-    top: 180px;
-    left: 20px;
-    animation: rotate2 16s ease-in infinite;
+}
+.Comments .leftBubbles  .Bigbubble{
+    animation: rotate1 10s ease-in infinite ;
+    top: 50px;
+    background-image: url(/static/imgs/commentspeople1.jpg);
+}
+.Comments .leftBubbles .mediumbubble{
+    top: 230px;
+    animation: rotate2 10s ease-in infinite reverse;
+    background-image: url(/static/imgs/commentspeople2.jpg);
+
 }
 .Comments .leftBubbles .smallbubble{
-    width: 60px;
-    height: 60px;
-    top: 320px;
-    left: 20px;
-    animation: rotate3 16s ease-in infinite reverse;
+    top: 370px;
+    animation: rotate3 14s ease-in infinite;
+    background-image: url(/static/imgs/commentspeople3.jpg);
+    background-position: left;
+
+}
+.Comments .rigthbubbles  .Bigbubble{
+    animation: rotate4 16s ease-in infinite ;
+    background-image: url(/static/imgs/commentspeople4.jpg);
+    top: 310px;
+}
+.Comments .rigthbubbles .mediumbubble{
+    animation: rotate5 13s ease-in infinite ;
+    background-image: url(/static/imgs/commentspeople5.jpg);
+    top: 150px;
+}
+.Comments .rigthbubbles .smallbubble{
+    background-image: url(/static/imgs/commentspeople6.jpg);
+    top: 50px;
+    animation: rotate6 10s ease-in infinite reverse;
+}
+.Comments .right{
+    right: 60px;
 }
 .Comments .left{
-    left: 20px;
+    left: 60px;
+}
+.fa-envelope{
+    font-size: 7rem;
 }
 @keyframes rotate1 {
     0%{
-        top: 20px;
+        top: 50px;
     }
     25%{
-        top: 40px;
+        top: 70px;
     }
     50%{
-        left: 40px;
+        left: 80px;
     }
     75%{
-        top: 20px;
+        top: 50px;
     }
     100%{
-        left: 20px;
+        left: 60px;
     }
     
 }
 @keyframes rotate2 {
     0%{
-        top: 160px;
+        top: 230px;
     }
     25%{
-        top:180px;
+        top:250px;
     }
     50%{
-        left: 40px;
+        left: 80px;
     }
     75%{
-        top: 160px;
+        top: 230px;
     }
     100%{
-        left: 20px;
+        left: 60px;
     }
     
 }
 @keyframes rotate3 {
     0%{
-        top: 300px;
+        top: 370px;
     }
     25%{
-        top:320px;
+        top:390px;
     }
     50%{
-        left: 40px;
+        left: 80px;
     }
     75%{
-        top: 300px;
+        top: 370px;
     }
     100%{
-        left: 20px;
+        left: 60px;
+    }
+    
+}
+@keyframes rotate4 {
+    0%{
+        top: 310px;
+    }
+    25%{
+        top:330px;
+    }
+    50%{
+        right: 80px;
+    }
+    75%{
+        top: 310px;
+    }
+    100%{
+        right: 60px;
+    }
+    
+}
+@keyframes rotate5 {
+    0%{
+        top: 150px;
+    }
+    25%{
+        top:170px;
+    }
+    50%{
+        right: 80px;
+    }
+    75%{
+        top: 150px;
+    }
+    100%{
+        right: 60px;
+    }
+    
+}
+@keyframes rotate6 {
+    0%{
+        top: 50px;
+    }
+    25%{
+        top:70px;
+    }
+    50%{
+        right: 80px;
+    }
+    75%{
+        top: 50px;
+    }
+    100%{
+        right: 60px;
     }
     
 }

@@ -33,3 +33,45 @@ setInterval(function(){
 },10000)
 console.log("test")
 
+
+
+
+// start comment section
+let comments = [
+    "Adults should be able to go out and enjoy a quiet dinner. There are plenty of family restaurants that allow children... should be nothing wrong with having a few for adults.",
+    "Coffe smells better than is tastes and chocolate tastes better than it smells.",
+    "No one should suffer from food insecurity when they work 40 hours a week.",
+    "i like dessert made with lemon better than chocolate - lemo meringue pie over chocolate cake.",
+    "Different pasta shapes MAKE THE PASTA TASTE DIFFERENT , shells being the best."
+]
+let comment = document.querySelector(".Comments .container .commentSection")
+let beforeBtn = document.querySelector(".Comments .container .UserDeatils .control #left")
+let AfterBtn = document.querySelector(".Comments .container .UserDeatils .control #rigth")
+let CommentIndex = 0
+AfterBtn.onclick = function(){
+    comment.removeChild(comment.lastElementChild)
+    let text1 = document.createElement("p")
+    text1.classList.add("fs-5")
+    text1.setAttribute("data-aos","fade")
+    text1.setAttribute("data-aos-duration","1000")
+    CommentIndex++
+    if(CommentIndex === comments.length-1){
+        CommentIndex = 0
+    }
+    text1.textContent = comments[CommentIndex]
+    comment.appendChild(text1)    
+    console.log(CommentIndex)
+}
+beforeBtn.onclick = function(){
+    comment.removeChild(comment.lastElementChild)
+    let text1 = document.createElement("p")
+    text1.setAttribute("data-aos","fade")
+    text1.textContent = comments[CommentIndex]
+    CommentIndex--
+    if(CommentIndex === 0){
+        CommentIndex = comments.length - 1
+    }
+    comment.appendChild(text1)  
+    console.log(CommentIndex)
+
+}

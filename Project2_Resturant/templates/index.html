@@ -10,6 +10,10 @@
         <title>Home Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/css/normalize.css">
+        <!-- fontAwsome link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- style file -->
         <link rel="stylesheet" href="/static/css/index.css">
         <!-- bootstrap link -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
@@ -20,9 +24,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
         <!-- animate.css library -->
+    <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    
+        <!-- fontawsome -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
 
     
@@ -71,7 +79,7 @@
         <!-- start of landing section -->
         <div class="landing d-flex align-items-center ">
             <video id="videobg" autoplay loop muted>
-                <source src="/static/imgs/landingBackground.mp4" type="video/mp4">
+                <!-- <source src="/static/imgs/landingBackground.mp4" type="video/mp4"> -->
             </video>
             <div class="container text-white">
                 <div class="row align-items-center justify-content-center gap-sm-5 gap-5">
@@ -427,30 +435,31 @@
         <!-- end of Reservation section -->
 
 
-        <div class="Comments">
+        <div class="Comments position-relative d-flex align-items-center justify-content-center bgsc">
             <div class="leftBubbles bubbles left-0">
-                <div class="bubble left Bigbubble person1"></div>
-                <div class="bubble left mediumbubble person1"></div>
-                <div class="bubble left smallbubble person1"></div>
+                <div class="bubble position-absolute rounded-circle left Bigbubble person1"></div>
+                <div class="bubble position-absolute rounded-circle left mediumbubble person1"></div>
+                <div class="bubble position-absolute rounded-circle left smallbubble person1"></div>
             </div>
             <div class="rigthbubbles bubbles">
-                <div class="bubble smallbubble person2"></div>
-                <div class="bubble Bigbubble person2"></div>
-                <div class="bubble mediumbubble person2"></div>
+                <div class="bubble position-absolute rounded-circle right smallbubble person2"></div>
+                <div class="bubble position-absolute rounded-circle right Bigbubble person2"></div>
+                <div class="bubble position-absolute rounded-circle right mediumbubble person2"></div>
             </div>
             <div class="container">
-                <div class="commentSection text-center">
-                    <div class="img"></div>
-                    <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.  magnam accusantium aut at atque explicabo minima doloribus modi tempora perspiciatis sequi quam facilis?</p>
+                <div class="commentSection mb-5 d-flex flex-column align-items-center justify-content-between position-relative text-white w-100 my-0 mx-auto text-center">
+                    <img src="/static/imgs/commentsLogo.svg" alt="">
+                    <p class="fs-5">Adults should be able to go out and enjoy a quiet dinner. There are plenty of family restaurants that allow children... should be nothing wrong with having a few for adults.</p>
                 </div>
-                <div class="UserDeatils d-flex justify-content-between">
+                <div class="UserDeatils position-absolute w-100 d-flex justify-content-between">
                     <div class="userInfo">
                         <div class="name">Yamen Nasri</div>
                         <div class="work">FrontEnd</div>
+                        <i class="fa fa-house"></i>
                     </div>
                     <div class="control">
-                        <button id="left"><</span>
-                        <button id="rigth">></button>
+                        <button class="Commentleft" id="left"><</span>
+                        <button class="Commentrigth" id="rigth">></button>
                     </div>
                 </div>
             </div>
@@ -484,4 +493,5 @@
             once : false });
     </script>
     <!-- data-aos="fade-down" data-aos-once="false" data-aos-duration="000" -->
+
 </html>
