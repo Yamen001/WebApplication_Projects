@@ -38,6 +38,9 @@
     <!-- <div class="fixed-order-button">
         <a href="#">icon</a>
         </div> -->
+        <button class="GoTop">
+
+        </button>
         <nav class="navbar navbar-expand-md navbar-dark px-5 py-0 position-fixed w-100 text-white">
             <div class="container">
                 <img src="/static/imgs/logo2.png" class=" navbar-brand me-5" alt="">
@@ -79,7 +82,7 @@
         <!-- start of landing section -->
         <div class="landing d-flex align-items-center ">
             <video id="videobg" autoplay loop muted>
-                <!-- <source src="/static/imgs/landingBackground.mp4" type="video/mp4"> -->
+                <source src="/static/imgs/landingBackground.mp4" type="video/mp4">
             </video>
             <div class="container text-white">
                 <div class="row align-items-center justify-content-center gap-sm-5 gap-5">
@@ -433,36 +436,38 @@
         </div> -->
         <!-- end of Reservation section -->
 
-
-        <div class="Comments position-relative d-flex align-items-center justify-content-center bgsc">
-            <div class="leftBubbles bubbles left-0">
-                <div class="bubble position-absolute rounded-circle left Bigbubble person1"></div>
-                <div class="bubble position-absolute rounded-circle left mediumbubble person1"></div>
-                <div class="bubble position-absolute rounded-circle left smallbubble person1"></div>
-            </div>
-            <div class="rigthbubbles bubbles">
-                <div class="bubble position-absolute rounded-circle right smallbubble person2"></div>
-                <div class="bubble position-absolute rounded-circle right Bigbubble person2"></div>
-                <div class="bubble position-absolute rounded-circle right mediumbubble person2"></div>
-            </div>
-            <div class="container">
-                <div class="commentSection mb-5 d-flex flex-column align-items-center justify-content-between position-relative text-white w-100 my-0 mx-auto text-center">
-                    <img src="/static/imgs/commentsLogo.svg" alt="">
-                    <p class="fs-5">Adults should be able to go out and enjoy a quiet dinner. There are plenty of family restaurants that allow children... should be nothing wrong with having a few for adults.</p>
+        <div class="vidoremover">
+            
+            <div class="Comments position-relative d-flex align-items-center justify-content-center bgsc">
+                <div class="leftBubbles d-xl-block d-none bubbles left-0">
+                    <div class="bubble position-absolute rounded-circle left Bigbubble person1"></div>
+                    <div class="bubble position-absolute rounded-circle left mediumbubble person1"></div>
+                    <div class="bubble position-absolute rounded-circle left smallbubble person1"></div>
                 </div>
-                <div class="UserDeatils position-absolute w-100 d-flex justify-content-between">
-                    <div class="userInfo">
-                        <div class="name">Yamen Nasri</div>
-                        <div class="work">FrontEnd</div>
-                        <i class="fa fa-house"></i>
+                <div class="rigthbubbles d-xl-block d-none bubbles">
+                    <div class="bubble position-absolute rounded-circle right smallbubble person2"></div>
+                    <div class="bubble position-absolute rounded-circle right Bigbubble person2"></div>
+                    <div class="bubble position-absolute rounded-circle right mediumbubble person2"></div>
+                </div>
+                <div class="container">
+                    <div class="commentSection mb-5 d-flex flex-column align-items-center justify-content-between position-relative text-white w-100 my-0 mx-auto text-center">
+                        <img src="/static/imgs/commentsLogo.svg" alt="">
+                        <p class="fs-5">Adults should be able to go out and enjoy a quiet dinner. There are plenty of family restaurants that allow children... should be nothing wrong with having a few for adults.</p>
                     </div>
-                    <div class="control">
-                        <button class="Commentleft" id="left"><</span>
-                        <button class="Commentrigth" id="rigth">></button>
+                    <div class="UserDeatils position-absolute w-100 d-flex justify-content-between">
+                        <div class="userInfo">
+                            <div class="name fs-3">Marry lous</div>
+                            <div class="work orange">Marketing Director</div>
+                        </div>
+                        <div class="control">
+                            <button class="Commentleft border-0 fw-bold me-3 bg-white text-black-50 fs-2" id="left"><</span>
+                            <button class="Commentrigth border-0 fw-bold bg-white text-black-50 fs-2" id="rigth">></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
 
         <!-- start of About Us section -->

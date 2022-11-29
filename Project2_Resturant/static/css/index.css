@@ -38,8 +38,8 @@ h1{
     font-size: 3rem;
 }
 nav{
-    background-color:rgb(129, 52, 8);
     top: 0px;
+    background-Color : rgb(143, 54, 2);
     transition: .4s ease-in;
     z-index: 100;
 }
@@ -56,7 +56,7 @@ nav .navbar-nav li{
 }
 .landing{
     min-height: 100vh;
-    padding: 100px 40px 20px;
+    padding: 100px 40px 20px ;
 }
 .landing .container .img{
     width: 360px;
@@ -194,10 +194,12 @@ nav .navbar-nav li{
 }
 
 
-
+.vidoremover{
+    height: 90vh;
+    background-color: white;
+}
 .Comments{
     height: 75vh;
-    margin: 90px 0;
     background-image: url(/static/imgs/commentback.jpg);
     background-position: center;
     background-size: cover;
@@ -217,17 +219,17 @@ nav .navbar-nav li{
     width: 100px;
 }
 .Comments .commentSection{
-    background-color: re;
-    height: 150px;
+    height: 200px;
 }
 .UserDeatils{
     bottom: -40px;
     left: 50%;
     translate:-50% ;
     max-width: 900px;
-    padding: 40px 30px;
+    padding: 30px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 20px 12px rgba(170, 170, 170, 0.542);
+    box-shadow: 0px 14px 12px rgba(120, 120, 120, 0.445);
+    border-radius: 10px;
 }
 .bubble{
     background-size: cover;
@@ -246,37 +248,37 @@ nav .navbar-nav li{
     height: 80px;
 }
 .Comments .leftBubbles  .Bigbubble{
-    animation: rotate1 10s ease-in infinite ;
+    animation: rotate1 5s ease-in infinite ;
     top: 50px;
     background-image: url(/static/imgs/commentspeople1.jpg);
 }
 .Comments .leftBubbles .mediumbubble{
     top: 230px;
-    animation: rotate2 10s ease-in infinite reverse;
+    animation: rotate2 5s ease-in infinite reverse;
     background-image: url(/static/imgs/commentspeople2.jpg);
 
 }
 .Comments .leftBubbles .smallbubble{
     top: 370px;
-    animation: rotate3 14s ease-in infinite;
+    animation: rotate3 6s ease-in infinite;
     background-image: url(/static/imgs/commentspeople3.jpg);
     background-position: left;
 
 }
 .Comments .rigthbubbles  .Bigbubble{
-    animation: rotate4 16s ease-in infinite ;
+    animation: rotate4 8s ease-in infinite ;
     background-image: url(/static/imgs/commentspeople4.jpg);
     top: 310px;
 }
 .Comments .rigthbubbles .mediumbubble{
-    animation: rotate5 13s ease-in infinite ;
+    animation: rotate5 5s ease-in infinite ;
     background-image: url(/static/imgs/commentspeople5.jpg);
     top: 150px;
 }
 .Comments .rigthbubbles .smallbubble{
     background-image: url(/static/imgs/commentspeople6.jpg);
     top: 50px;
-    animation: rotate6 10s ease-in infinite reverse;
+    animation: rotate6 5s ease-in infinite reverse;
 }
 .Comments .right{
     right: 60px;

@@ -38,40 +38,73 @@ console.log("test")
 
 // start comment section
 let comments = [
-    "Adults should be able to go out and enjoy a quiet dinner. There are plenty of family restaurants that allow children... should be nothing wrong with having a few for adults.",
-    "Coffe smells better than is tastes and chocolate tastes better than it smells.",
-    "No one should suffer from food insecurity when they work 40 hours a week.",
-    "i like dessert made with lemon better than chocolate - lemo meringue pie over chocolate cake.",
-    "Different pasta shapes MAKE THE PASTA TASTE DIFFERENT , shells being the best."
+    {
+        name:"Marry lous",
+        work:"Marketing Director",
+        comment:"Adults should be able to go out and enjoy a quiet dinner. There are plenty of family restaurants that allow children... should be nothing wrong with having a few for adults."
+    },
+    {
+        name:"Sara OL",
+        work:"Principal",
+        comment:"Coffe smells better than is tastes and chocolate tastes better than it smells."
+    },
+    {
+        name:"Ahmad Sayed",
+        work:"Prep Cook",
+        comment:"No one should suffer from food insecurity when they work 40 hours a week."
+    },
+    {
+        name:"Lana mais",
+        work:"Media Buyer",
+        comment:"i like dessert made with lemon better than chocolate - lemo meringue pie over chocolate cake."
+    },
+    {
+        name:"Younnis",
+        work:"Director",
+        comment:"Different pasta shapes MAKE THE PASTA TASTE DIFFERENT , shells being the best."
+    },
 ]
 let comment = document.querySelector(".Comments .container .commentSection")
 let beforeBtn = document.querySelector(".Comments .container .UserDeatils .control #left")
 let AfterBtn = document.querySelector(".Comments .container .UserDeatils .control #rigth")
+let commenterName = document.querySelector(".Comments .UserDeatils .userInfo .name")
+let commenterWork = document.querySelector(".Comments .UserDeatils .userInfo .work")
 let CommentIndex = 0
 AfterBtn.onclick = function(){
+    aftercomment()
+}
+beforeBtn.onclick = function(){
+    comment.removeChild(comment.lastElementChild)
+    let text1 = document.createElement("p")
+    text1.classList.add("fs-5")
+    text1.setAttribute("data-aos","fade")
+    text1.setAttribute("data-aos-duration","1000")
+    if(CommentIndex === 0){
+        CommentIndex = comments.length
+    }
+    CommentIndex--
+    text1.textContent = comments[CommentIndex].comment
+    comment.appendChild(text1)  
+    console.log(CommentIndex)
+    commenterName.textContent = comments[CommentIndex].name
+    commenterWork.textContent = comments[CommentIndex].work
+}
+setInterval(() => {
+    aftercomment()
+}, 10000);
+
+function aftercomment(){
     comment.removeChild(comment.lastElementChild)
     let text1 = document.createElement("p")
     text1.classList.add("fs-5")
     text1.setAttribute("data-aos","fade")
     text1.setAttribute("data-aos-duration","1000")
     CommentIndex++
-    if(CommentIndex === comments.length-1){
+    if(CommentIndex === comments.length){
         CommentIndex = 0
     }
-    text1.textContent = comments[CommentIndex]
+    text1.textContent = comments[CommentIndex].comment
     comment.appendChild(text1)    
-    console.log(CommentIndex)
-}
-beforeBtn.onclick = function(){
-    comment.removeChild(comment.lastElementChild)
-    let text1 = document.createElement("p")
-    text1.setAttribute("data-aos","fade")
-    text1.textContent = comments[CommentIndex]
-    CommentIndex--
-    if(CommentIndex === 0){
-        CommentIndex = comments.length - 1
-    }
-    comment.appendChild(text1)  
-    console.log(CommentIndex)
-
+    commenterName.textContent = comments[CommentIndex].name
+    commenterWork.textContent = comments[CommentIndex].work
 }
