@@ -47,7 +47,7 @@ h1{
 }
 nav{
     top: 0px;
-    background-Color : rgb(105, 39, 2);
+    background-Color : rgb(160, 75, 0);
     transition: .4s ease-in;
     z-index: 100;
 }

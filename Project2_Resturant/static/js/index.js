@@ -12,25 +12,27 @@ window.addEventListener('scroll',function(){
     }
     lastScrollTop = scrollTop;
 });
-let landingfood = document.querySelector(".landing img")
-let i =1
-setInterval(function(){
-    if(i === 1){
-        landingfood.src = `/static/imgs/landingfood${i}.png`
-        // landingfood.style.animation = ""
-        i++
-    }
-    else if(i ===2){
-        landingfood.src = `/static/imgs/landingfood${i}.png`
-        // landingfood.style.animation = ""
-        i++
-    }
-    else{
-        landingfood.src = `/static/imgs/landingfood${i}.png`
-        // landingfood.style.animation = "fading 2s"
+
+
+
+let landingfood = document.querySelector(".landing .img")
+let i =2
+setInterval(() => {
+    if(i ===4){
         i = 1
     }
-},10000)
+    landingfood.removeChild(landingfood.firstElementChild)
+    let img = document.createElement("img")
+    img.setAttribute("src",`/static/imgs/landingfood${i}.png`)
+    img.setAttribute("data-aos","fade-left")
+    img.setAttribute("data-aos-once","true")
+    img.setAttribute("data-aos-duration","2000")
+    landingfood.appendChild(img)
+    i++
+}, 10000);
+console.log("test")
+console.log("test")
+console.log("test")
 console.log("test")
 
 
