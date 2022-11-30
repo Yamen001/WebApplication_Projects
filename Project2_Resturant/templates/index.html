@@ -41,7 +41,7 @@
         <button class="GoTop">
 
         </button>
-        <nav class="navbar navbar-expand-md navbar-dark px-5 py-0 position-fixed w-100 text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-0 position-fixed w-100 text-white">
             <div class="container">
                 <img src="/static/imgs/logo2.png" class=" navbar-brand me-5" alt="">
                 <!-- <a class="navbar-brand me-5" href="#"></a> -->
@@ -66,7 +66,7 @@
                             <a class="nav-link text-white" href="#">Contact Us</a>
                         </li>
                     </ul>
-                    <div class="d-flex align-items-center justify-content-center">
+                    <div class="d-flex align-items-center justify-content-center mb-3 mb-lg-0">
                         {% if user.is_authenticated %}
                         <li class="me-3 list-unstyled">{{user.first_name}}</li>
                         <a href="accounts/logout" class="logout text-decoration-none border-1 border-white btn text-white">logout</a>
@@ -82,7 +82,7 @@
         <!-- start of landing section -->
         <div class="landing d-flex align-items-center ">
             <video id="videobg" autoplay loop muted>
-                <source src="/static/imgs/landingBackground.mp4" type="video/mp4">
+                <!-- <source src="/static/imgs/landingBackground.mp4" type="video/mp4"> -->
             </video>
             <div class="container text-white">
                 <div class="row align-items-center justify-content-center gap-sm-5 gap-5">
@@ -394,75 +394,86 @@
             </div>
         </div>
         <!-- end of simple food menu section -->
+
+
+        
         <!-- start of Reservation section-->
-        <!-- <div class="reservtion d-flex align-items-center">
-            <div class="container">
-                <div class="roww bg-danger d-flex justify-content-center gap-5" >
-                    <div class="box border-1 border-black ">
+        <div class="reservtion py-5 bg-white d-flex align-items-center">
+            <div class="container h-100 d-flex flex-column justify-content-center text-white gap-5">
+                <div class="intro-text">
+                    <h3 class="intro-secTitle m-0 text-center">Appointment</h3>
+                    <h1 class=" m-0 text-center text-white display-3 fw-light">
+                        Book a table
+                    </h1>
+                </div>
+                <div class="roww d-flex justify-content-center gap-xl-5 gap-4 flex-wrap" >
+                    <div class="box p-4 ">
                         <p>Day</p>
-                        <select name="Days" id="Day">
-                            <option value="1">Sunday</option>
-                            <option value="2">Monay</option>
-                            <option value="3">Tuesday</option>
-                            <option value="4">Wensday</option>
-                            <option value="5">Thursday</option>
-                            <option value="6">Friday</option>
-                            <option value="7">Satarday</option>
+                        <select name="Days" id="Day" class="fs-3 w-100 bg-transparent border-0 fs-5 text-white">
+                            <option class="fs-5 text-black-50" value="1">Sunday</option>
+                            <option class="fs-5 text-black-50" value="2">Monay</option>
+                            <option class="fs-5 text-black-50" value="3">Tuesday</option>
+                            <option class="fs-5 text-black-50" value="4">Wensday</option>
+                            <option class="fs-5 text-black-50" value="5">Thursday</option>
+                            <option class="fs-5 text-black-50" value="6">Friday</option>
+                            <option class="fs-5 text-black-50" value="7">Satarday</option>
                         </select>
                     </div>
-                    <div class="box">
+                    <div class="box p-4 ">
                         <p>Month</p>
-                        <select name="Months" id="Month">
-                            <option value="1">Jan</option>
-                            <option value="2">Feb</option>
-                            <option value="3">Mar</option>
-                            <option value="4">Apr</option>
-                            <option value="5">May</option>
-                            <option value="6">Jun</option>
-                            <option value="7">Jul</option>
-                            <option value="8">Aug</option>
-                            <option value="9">Sep</option>
-                            <option value="10">Oct</option>
-                            <option value="11">Nov</option>
-                            <option value="12">Dec</option>
+                        <select name="Months" id="Month" class="fs-3 w-100 bg-transparent border-0 fs-5 text-white">
+                            <option class="fs-5 text-black-50" value="1">Jan</option>
+                            <option class="fs-5 text-black-50" value="2">Feb</option>
+                            <option class="fs-5 text-black-50" value="3">Mar</option>
+                            <option class="fs-5 text-black-50" value="4">Apr</option>
+                            <option class="fs-5 text-black-50" value="5">May</option>
+                            <option class="fs-5 text-black-50" value="6">Jun</option>
+                            <option class="fs-5 text-black-50" value="7">Jul</option>
+                            <option class="fs-5 text-black-50" value="8">Aug</option>
+                            <option class="fs-5 text-black-50" value="9">Sep</option>
+                            <option class="fs-5 text-black-50" value="10">Oct</option>
+                            <option class="fs-5 text-black-50" value="11">Nov</option>
+                            <option class="fs-5 text-black-50" value="12">Dec</option>
                         </select>                    
                     </div>
-                    <div class="box">
-                        <p>Guests Number</p>
-                        <input type="number">
+                    <div class="box p-4">
+                        <p>Guests</p>
+                        <input type="number" min="0" max="10" value="1" class="fs-3 w-100 bg-transparent border-0 fs-5 text-white">
+                    </div>
+                    <div class="button box bookNow p-3 text-center">
+                        <i class="fas fa-calendar-alt display-3"></i>
+                        <p>Book Now</p>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- end of Reservation section -->
 
-        <div class="vidoremover">
-            
-            <div class="Comments position-relative d-flex align-items-center justify-content-center bgsc">
-                <div class="leftBubbles d-xl-block d-none bubbles left-0">
-                    <div class="bubble position-absolute rounded-circle left Bigbubble person1"></div>
-                    <div class="bubble position-absolute rounded-circle left mediumbubble person1"></div>
-                    <div class="bubble position-absolute rounded-circle left smallbubble person1"></div>
+        
+        <div class="Comments position-relative d-flex align-items-center justify-content-center bgsc">
+            <div class="leftBubbles d-xl-block d-none bubbles left-0">
+                <div class="bubble position-absolute rounded-circle left Bigbubble person1"></div>
+                <div class="bubble position-absolute rounded-circle left mediumbubble person1"></div>
+                <div class="bubble position-absolute rounded-circle left smallbubble person1"></div>
+            </div>
+            <div class="rigthbubbles d-xl-block d-none bubbles">
+                <div class="bubble position-absolute rounded-circle right smallbubble person2"></div>
+                <div class="bubble position-absolute rounded-circle right Bigbubble person2"></div>
+                <div class="bubble position-absolute rounded-circle right mediumbubble person2"></div>
+            </div>
+            <div class="container">
+                <div class="commentSection mb-5 d-flex flex-column align-items-center justify-content-between position-relative text-white w-100 my-0 mx-auto text-center">
+                    <img src="/static/imgs/commentsLogo.svg" alt="">
+                    <p class="fs-5">Adults should be able to go out and enjoy a quiet dinner. There are plenty of family restaurants that allow children... should be nothing wrong with having a few for adults.</p>
                 </div>
-                <div class="rigthbubbles d-xl-block d-none bubbles">
-                    <div class="bubble position-absolute rounded-circle right smallbubble person2"></div>
-                    <div class="bubble position-absolute rounded-circle right Bigbubble person2"></div>
-                    <div class="bubble position-absolute rounded-circle right mediumbubble person2"></div>
-                </div>
-                <div class="container">
-                    <div class="commentSection mb-5 d-flex flex-column align-items-center justify-content-between position-relative text-white w-100 my-0 mx-auto text-center">
-                        <img src="/static/imgs/commentsLogo.svg" alt="">
-                        <p class="fs-5">Adults should be able to go out and enjoy a quiet dinner. There are plenty of family restaurants that allow children... should be nothing wrong with having a few for adults.</p>
+                <div class="UserDeatils position-absolute w-100 d-flex justify-content-between">
+                    <div class="userInfo">
+                        <div class="name fs-3">Marry lous</div>
+                        <div class="work orange">Marketing Director</div>
                     </div>
-                    <div class="UserDeatils position-absolute w-100 d-flex justify-content-between">
-                        <div class="userInfo">
-                            <div class="name fs-3">Marry lous</div>
-                            <div class="work orange">Marketing Director</div>
-                        </div>
-                        <div class="control">
-                            <button class="Commentleft border-0 fw-bold me-3 bg-white text-black-50 fs-2" id="left"><</span>
-                            <button class="Commentrigth border-0 fw-bold bg-white text-black-50 fs-2" id="rigth">></button>
-                        </div>
+                    <div class="control">
+                        <button class="Commentleft border-0 fw-bold me-3 bg-white text-black-50 fs-2" id="left"><</span>
+                        <button class="Commentrigth border-0 fw-bold bg-white text-black-50 fs-2" id="rigth">></button>
                     </div>
                 </div>
             </div>
