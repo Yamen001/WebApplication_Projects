@@ -1,0 +1,6 @@
+from django.shortcuts import redirect, render
+from .models import Chef_One,Chef_Two,Chef_Three,Chef_Four,Chef_Five
+# Create your views here.
+def index(request):
+    return render(request, 'index.html')
+

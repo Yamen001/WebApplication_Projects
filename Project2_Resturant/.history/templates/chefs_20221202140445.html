@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section style = "padding-top: 200px">
+    <h1>Hello from chefs </h1>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class = "chefs">
+    {% for chef in chefs %}
+    <div class = "chef_one">
+        {{chef[0].name}}
+        {{chef.age}}
+    </div>
+
+    <div class = "chef_one">
+        {{chef[0].name}}
+
+    </div>
+
+    <div class = "chef_one">
+        {{chef[0].name}}
+
+    </div>
+
+    <div class = "chef_one">
+        {{chef[0].name}}
+
+    </div>
+
+    <div class = "chef_one">
+        {{chef[0].name}}
+
+    </div>
+    {% endfor%}
+</div>
+{% endblock %}
