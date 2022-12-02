@@ -2,7 +2,8 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<section style = "padding-top: 200px"> <!-- to show the content -->
+<section style = "padding-top: 200px">
+    <h1>Hello from chefs </h1>
 </section>
 {% endblock %}
 
@@ -14,7 +15,6 @@
         {{chef.age}}
         {{chef.desc}}
         {{chef.profession}}
-        <img src = "{{chef.img}}" alt = "this is a chef" style = 'width: 300px'>
     </div>
     {% endfor %}
 </div>

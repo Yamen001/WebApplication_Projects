@@ -54,5 +54,4 @@ def contact(request):
 def handleBlog(request):
     return render(request, 'blog.html')
 
-def about(request):
-    return render(request, 'about.html')
+def about

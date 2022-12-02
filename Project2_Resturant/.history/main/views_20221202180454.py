@@ -49,10 +49,7 @@ def chefs(request):
     return render(request, 'chefs.html', {'chefs':chefs})
 
 def contact(request):
-    return render(request, 'contact.html')
+    return render(requestm)
 
 def handleBlog(request):
     return render(request, 'blog.html')
-
-def about(request):
-    return render(request, 'about.html')

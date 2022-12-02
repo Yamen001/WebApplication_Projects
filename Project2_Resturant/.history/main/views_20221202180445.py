@@ -48,11 +48,7 @@ def chefs(request):
     chefs = [chef1, chef2,chef3,chef4,chef5]
     return render(request, 'chefs.html', {'chefs':chefs})
 
-def contact(request):
-    return render(request, 'contact.html')
+def contact(reuestreq)
 
 def handleBlog(request):
     return render(request, 'blog.html')
-
-def about(request):
-    return render(request, 'about.html')

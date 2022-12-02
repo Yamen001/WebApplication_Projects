@@ -17,7 +17,7 @@ def chefs(request):
     chef2 = Chef_Two()
     chef2.name = "Mansour"
     chef2.profession = "Pizza"
-    chef2.img = 'static/imgs/chef_2.jpeg'
+    chef2.img = 'imgs/chef_2.jpeg'
     chef2.desc = "leorm text here"
     chef2.age = 29
     # -----------------------------
@@ -47,12 +47,3 @@ def chefs(request):
     
     chefs = [chef1, chef2,chef3,chef4,chef5]
     return render(request, 'chefs.html', {'chefs':chefs})
-
-def contact(request):
-    return render(request, 'contact.html')
-
-def handleBlog(request):
-    return render(request, 'blog.html')
-
-def about(request):
-    return render(request, 'about.html')
