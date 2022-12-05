@@ -13,6 +13,25 @@ window.addEventListener('scroll',function(){
     lastScrollTop = scrollTop;
 });
 
+let GoTop = document.querySelector("button.GoTop")
+let simpleMenu = document.querySelector(".simple-menu")
+let simpleMenuOffestTop = simpleMenu.getBoundingClientRect().top
+
+window.onscroll = function(){
+    if(window.scrollY >= simpleMenuOffestTop){
+        GoTop.style.display = "block"
+    }
+    else{
+        GoTop.style.display = "none"
+    }
+}
+// onclick works...because GoTopbutton is an existing element inside the html
+GoTop.onclick = function(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
+}
 
 
 let landingfood = document.querySelector(".landing .img")
@@ -31,13 +50,6 @@ setInterval(() => {
     i++
 }, 10000);
 console.log("test")
-console.log("test")
-console.log("test")
-console.log("test")
-
-
-
-
 // start comment section
 let comments = [
     {
@@ -110,3 +122,7 @@ function aftercomment(){
     commenterName.textContent = comments[CommentIndex].name
     commenterWork.textContent = comments[CommentIndex].work
 }
+
+
+// prepare tow buttons ..clean your js code ... fix the footer resposivity
+console.log("hello test")
