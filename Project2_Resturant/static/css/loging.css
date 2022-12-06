@@ -4,55 +4,65 @@
     box-sizing: border-box;
     /* outline: 2px solid red; */
 }
+p{
+    margin-bottom: 0;
+}
+.logo{
+    width: 180px;
+    height: 180px;
+    background-image: url(/static/imgs/logo2.png);
+    background-size: cover; 
+}
 body{
     position: relative;    
-    height: 100vh;
-    background-image: url(/static/imgs/reverstion1.jpg);
+    min-height: 100vh;
+    background-image: url(/static/imgs/login1.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 30px;
     font-family: monospace;
 }
 body::before{
     content: "";
     position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.397);
-}
-.container{
-    background-color: rgba(0, 0, 0, 0.808);
-    max-width: 500px;
+    left: 0;
+    height: 100%;
     width: 100%;
-    height: 560px;
+    background-color: rgba(0, 0, 0, 0.479);
+    z-index: -2;
+}
+.card-container{
+    display: flex;
+}
+.container2 , .container1{
+    height: 500px;
+
+}
+.container2{
+    background-color: rgba(0, 0, 0, 0.73);
     text-align: center;
-    padding: 20px 30px;
+    padding: 20px 50px;
     border-radius: 20px;
     position: relative;
 }
-.container h1{
+h1{
     font-family: 'Cookie', cursive;
     color: orange;
-    font-size: 4rem;
     font-weight: lighter;
 }
-.container h3{
+.container2 h3{
     color: white;
     text-transform: capitalize;
-    margin: 20px 0 0;
+    margin: 10px 0 0;
     font-size: 1.6rem;
 }
-.container form .row{
+.container2 form .rows{
     text-align: start;
     color: white;
     font-size: 1.3rem;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
-.container form .row input{
+.container2 form .rows input{
     padding: 10px 15px;
     font-size: 1.2rem;
     width: 100%;
@@ -63,14 +73,15 @@ body::before{
     color: white;
     transition: .5s ease;
 }
-.container form .row input:focus,
-.container form .row input:hover{
+.container2 form .rows input:focus,
+.container2 form .rows input:hover{
     border: 1px solid orange;
 }
-.container form .Lastrow{
+.container2 form .Lastrow{
     text-align: center;
+    margin: 40px 0 0;
 }
-.container form .Lastrow input{
+.container2 form .Lastrow input{
     width: 100px;
     font-size: .9rem;
     color: orange;
@@ -82,11 +93,11 @@ body::before{
     margin: 0 10px 0 0;
     padding: 10px 15px;
 }
-.container form .Lastrow input:hover{
+.container2 form .Lastrow input:hover{
     color: white;
     background-color: orange;
 }
-.container form  a{
+.container2 form  a{
     text-decoration: none;
     color: white;
     font-size:.8rem;
@@ -98,28 +109,25 @@ body::before{
     font-weight: 400;
 
 }
-.container ul{
+.container2 ul{
     position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 10px;
     display: flex;
     justify-content: center;
     gap: 50px;
 }
-.container ul li a{
+.container2 ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 35px;
     height: 35px;
     font-size: 1.1rem;
-    border: 1px solid white;
     color: white;
     background-color: transparent;
     transition: .5s ease;
 }
-.container ul li:hover a {
+.container2 ul li:hover a {
     color: orange;
     border-color: orange;
 }
