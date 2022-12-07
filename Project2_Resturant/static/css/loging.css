@@ -4,6 +4,9 @@
     box-sizing: border-box;
     /* outline: 2px solid red; */
 }
+.orange{
+    color: orange;
+}
 p{
     margin-bottom: 0;
 }
@@ -21,6 +24,7 @@ body{
     background-position: center bottom;
     background-repeat: no-repeat;
     font-family: monospace;
+    padding: 0 0 50px;
 }
 body::before{
     content: "";
@@ -28,18 +32,18 @@ body::before{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.538);
     z-index: -2;
 }
-.card-container{
-    display: flex;
+.container{
+    margin-bottom: 100px;    
 }
 .container2 , .container1{
     height: 500px;
 
 }
 .container2{
-    background-color: rgba(0, 0, 0, 0.73);
+    background-color: rgba(33, 33, 33, 0.849);
     text-align: center;
     padding: 20px 50px;
     border-radius: 20px;
@@ -47,30 +51,22 @@ body::before{
 }
 h1{
     font-family: 'Cookie', cursive;
-    color: orange;
     font-weight: lighter;
 }
 .container2 h3{
-    color: white;
-    text-transform: capitalize;
     margin: 10px 0 0;
     font-size: 1.6rem;
 }
 .container2 form .rows{
-    text-align: start;
-    color: white;
     font-size: 1.3rem;
     margin-bottom: 20px;
 }
 .container2 form .rows input{
     padding: 10px 15px;
     font-size: 1.2rem;
-    width: 100%;
     margin-top: 12px;
-    background-color: transparent !important;
     border: 1px solid white;
     outline: none;
-    color: white;
     transition: .5s ease;
 }
 .container2 form .rows input:focus,
@@ -78,17 +74,13 @@ h1{
     border: 1px solid orange;
 }
 .container2 form .Lastrow{
-    text-align: center;
-    margin: 40px 0 0;
+    margin: 30px 0 0;
 }
 .container2 form .Lastrow input{
     width: 100px;
     font-size: .9rem;
-    color: orange;
-    background-color: transparent;
     border: 1px solid orange;
     transition: .5s ease;
-    font-weight: bold;
     cursor: pointer;
     margin: 0 10px 0 0;
     padding: 10px 15px;
@@ -98,36 +90,40 @@ h1{
     background-color: orange;
 }
 .container2 form  a{
-    text-decoration: none;
-    color: white;
     font-size:.8rem;
+    transition: .6s ease;
+}
+.container2 form .Lastrow  a:hover,
+.container2 form  a.link:hover{
+    color: orange;
 }
 #invalid-password{
-    color: orange;
     font-size: 1rem;
-    margin: 30px 0 0;
+    margin: 20px 0 0;
     font-weight: 400;
 
 }
 .container2 ul{
-    position: absolute;
     bottom: 10px;
-    display: flex;
-    justify-content: center;
+    transform: translateX(-50%);
+    left: 50%;
     gap: 50px;
 }
 .container2 ul li a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 35px;
     height: 35px;
-    font-size: 1.1rem;
-    color: white;
+    font-size: 1.2rem;
     background-color: transparent;
+    color: white;
     transition: .5s ease;
+    text-decoration: none;
 }
 .container2 ul li:hover a {
     color: orange;
-    border-color: orange;
+}
+footer{
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.278);
 }
