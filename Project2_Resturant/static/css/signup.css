@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 2px solid red; */
+}
+.orange{
+    color: orange;
+}
+p{
+    margin-bottom: 0;
+}
+.logo{
+    width: 180px;
+    height: 180px;
+    background-image: url(/static/imgs/logo2.png);
+    background-size: cover; 
+}
+body{
+    position: relative;    
+    min-height: 100vh;
+    background-image: url(/static/imgs/signup.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    font-family: monospace;
+    padding: 0 0 50px;
+}
+body::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.538);
+    z-index: -2;
+}
+.container{
+    margin-bottom: 100px;    
+}
+h1{
+    font-family: 'Cookie', cursive;
+    font-weight: lighter;
+}
