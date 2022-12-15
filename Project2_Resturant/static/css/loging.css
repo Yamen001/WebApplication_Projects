@@ -32,7 +32,7 @@ body::before{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.538);
+    background-color: rgba(0, 0, 0, 0.371);
     z-index: -2;
 }
 .container{
@@ -84,10 +84,11 @@ h1{
     cursor: pointer;
     margin: 0 10px 0 0;
     padding: 10px 15px;
+    background-color: transparent;
 }
 .container2 form .Lastrow input:hover{
-    color: white;
     background-color: orange;
+    color: white;
 }
 .container2 form  a{
     font-size:.8rem;
@@ -101,7 +102,6 @@ h1{
     font-size: 1rem;
     margin: 20px 0 0;
     font-weight: 400;
-
 }
 .container2 ul{
     bottom: 10px;

@@ -25,6 +25,7 @@ body{
     background-repeat: no-repeat;
     font-family: monospace;
     padding: 0 0 50px;
+    font-family: monospace;
 }
 body::before{
     content: "";
@@ -46,16 +47,25 @@ form{
     max-width: fit-content;
     width: 100%;
     height: fit-content;
-    /* border: 1px solid white; */
     min-height: 300px;
     height: 100%;
-    background-color: rgba(52, 52, 52, 0.715);
+    background-color: rgb(30, 30, 30);
 }
-form .input-row{
-    /* background-color: blue; */
+form button{
+    width: 100px;
+    font-size: .9rem;
+    border: 1px solid orange;
+    transition: .5s ease;
+    cursor: pointer;
+    margin: 40px 0 0;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: orange;
+    font-weight: bold;
 }
-form .input{
-    /* background-color: #aaa; */
+form button:hover{
+    background-color: orange;
+    color: white;
 }
 form .input input{
     width: 100%;
@@ -74,12 +84,21 @@ form .input p{
 }
 form .input p{
     width: 210px;
-    color: white;
-
+}
+#invalid-password{
+    font-size: 1rem;
+    margin: 20px 0 0;
+    font-weight: 400;
 }
 footer{
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.278);
+        border-top: 1px solid rgba(255, 255, 255, 0.278);
+}
+form a{
+    color: orange;
+    font-size:.8rem;
+}
+form a:hover{
+    color: orange;
 }
