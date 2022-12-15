@@ -46,7 +46,7 @@ def chefs(request):
     chef5.age = 28
     
     # chefs = [chef1, chef2,chef3,chef4,chef5]
-    return render(request, 'chefs.html', {'chef1': chef1, 'chef2': chef2, 'chef3': chef3, 'chef4': chef4, 'chef5': chef5})
+    return render(request, 'chefs.html', {'chef1': chef1, 'chef2': chef2, 'chef3': chef3, 'chef4': chef4, 'chef5})
 
 def contact(request):
     return render(request, 'contact.html')
