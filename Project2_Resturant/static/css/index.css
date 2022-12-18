@@ -10,6 +10,9 @@ a{
 h1{
     margin: 0;
 }
+.cookieFamily{
+    font-family: 'Cookie', cursive;
+}
 .orange{
     color: rgb(220, 144, 5);
 }

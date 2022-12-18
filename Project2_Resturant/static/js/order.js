@@ -19,6 +19,7 @@ function PutList(list){
         if(i===list){
             e.classList.add('d-flex')
             e.classList.remove('d-none')
+            // e.setAttribute("data-aos","fade-left")
         }
         else(
             e.classList.add("d-none")
@@ -28,19 +29,28 @@ function PutList(list){
 
 let OrderNow = document.querySelector("#orderNow")
 let OrderMenu = document.querySelector(".orderMenu")
+let closebutton = document.querySelector("button.closeButton")
 OrderNow.onclick= function(){
     if(OrderMenu.classList.contains("closeMenu")){
         OrderMenu.classList.remove("closeMenu")
         OrderMenu.classList.add("openMenu")
+        document.body.style.overflow = "hidden"
     }
-    else{
-        OrderMenu.classList.add("closeMenu")
-    }
+    // else{
+    //     OrderMenu.classList.add("closeMenu")
+    // }
 }
+closebutton.onclick = function(){
+    OrderMenu.classList.add("closeMenu")
+    OrderMenu.classList.remove("openMenu")
+    document.body.style.overflow = "auto"
+}
+document.addEventListener("click",function(e){
+    if(e.target.classList.contains("img")){
+        console.log("yesssimg")
+    }
+})
 
-
-// lists imgs fix
 // ordre menu imgs fix
-// open and close buttons fix
 // add intro section 
 // clean code
