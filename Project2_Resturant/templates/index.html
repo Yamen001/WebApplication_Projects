@@ -1,4 +1,67 @@
 
+<head>
+    <style>
+        .chefs{
+            min-height: 100vh;
+            padding: 50px 0;
+        }
+        .owl-nav{
+            display: none;
+        }
+        .owl-dots{
+            margin: 20px 0;
+        }
+        .chefs .item{
+            height: 500px;
+            width: 350px;
+            background-color: red;
+            position: relative;
+            transition: .6s ease;
+        }
+        .chefs img{
+            height: 100%;
+            pointer-events: none;
+        }
+        .chefs .item .details{
+            position: absolute;
+            bottom: 170px;
+            left: 30px;
+            transition: .6s ease;
+            opacity: 0;
+        }
+        .chefs .item .details .Frontcard{
+            position: absolute;
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+            z-index: 2;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid #aaa;
+            text-align: center;
+        }
+        .chefs .item .details .Frontcard .name{
+            font-family: 'Cookie', cursive;
+            font-size: 50px;
+            color: orange;
+        }
+        .chefs .item .details .Backcard{
+            position: absolute;
+            width: 300px;
+            height: 150px;
+            z-index: 1;
+            top: 10px;
+            left: -10px;
+            background-color: rgb(255, 255, 255);
+
+        }
+        .chefs .item:hover .details{
+            /* display: block; */
+            bottom: 200px;
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
 <!-- note...delete the all the code above ...and discommentes....start and end block and extends..when you puch the code -->
 {% extends 'base.html' %}
 {% block content %}
@@ -324,12 +387,12 @@
                     </div>
                     <a class="button Menu-order align-self-center my-lg-5 my-2" href="#">See More</a>
                 </div>
-            </div>
+            </div> -->
             <!-- end of simple food menu section -->
     
     
             
-            <!-- start of Reservation section-->
+            <!---- start of Reservation section -->
             <div class="reservtion py-5 bg-white d-flex align-items-center">
                 <div class="container h-100 d-flex flex-column justify-content-center text-white gap-5">
                     <div class="intro-text">
@@ -378,7 +441,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- end of Reservation section -->
     
             
@@ -410,12 +473,73 @@
                     </div>
                 </div>
             </div>
+            <div class="chefs">
+                <div class="container">
+                    <div class="intro-text">
+                        <h3 class="intro-secTitle m-0 text-center">Chefs</h3>
+                        <h1 class=" mb-2 text-center text-black display-4 fw-light">
+                            Meet our chefs
+                        </h1>
+                    </div>
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <img src="/static/imgs/chef1.jpg" class="" alt="">
+                            <div class="details">
+                                <div class="Frontcard">
+                                    <div class="name">massa</div>
+                                    <div class="job">cheffa</div>
+                                </div>
+                                <div class="Backcard"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="/static/imgs/chef2.jpg" alt="">
+                            <div class="details">
+                                <div class="Frontcard">
+                                    <div class="name">massa</div>
+                                    <div class="job">cheffa</div>
+                                </div>
+                                <div class="Backcard"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="/static/imgs/chef3.jpg" loading="lazy" alt="">
+                            <div class="details">
+                                <div class="Frontcard">
+                                    <div class="name">massa</div>
+                                    <div class="job">cheffa</div>
+                                </div>
+                                <div class="Backcard"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="/static/imgs/chef4.jpg" alt="">
+                            <div class="details">
+                                <div class="Frontcard">
+                                    <div class="name">massa</div>
+                                    <div class="job">cheffa</div>
+                                </div>
+                                <div class="Backcard"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="/static/imgs/chef5.jpg" alt="">
+                            <div class="details">
+                                <div class="Frontcard">
+                                    <div class="name">massa</div>
+                                    <div class="job">cheffa</div>
+                                </div>
+                                <div class="Backcard"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
             <footer class="pb-3 px-4">
                 <div class="container text-white">
                     <img src="/static/imgs/logo2.png" class="logo" alt="">
-
                     <div class="row justify-content-center">
-
                         <div class="aboutUs col-12 col-lg-4 ">
                             <p class="intro-secTitle">About Us</p>
                             <p class="text-white-50 my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius nihil illo sapiente deserunt quaerat!</p>
@@ -459,23 +583,8 @@
                 </div>
             </footer>
         </div>
-
-
-        <!-- start of About Us section -->
-        <!-- <div class="simple-menu3">
-            <div class="container">
-                <a class="button About-us" href="#">See More</a>
-            </div>
-        </div> -->
-        <!-- end of About Us section -->
-
-
-        <!-- note ya kareem ....Landing button , simple food menu button and fixed buuton.... takes you to the same page which -->
-        <!-- it is the menu & order page -->
-
-        <!-- and book Now button ...it has no work in backend (static) -->
-
-    <!-- bootstrap js calling -->
-
     <!-- data-aos="fade-down" data-aos-once="false" data-aos-duration="000" -->
 {% endblock%}
+
+
+<!-- stop background video when scroll -->

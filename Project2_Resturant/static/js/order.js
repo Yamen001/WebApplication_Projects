@@ -36,9 +36,6 @@ OrderNow.onclick= function(){
         OrderMenu.classList.add("openMenu")
         document.body.style.overflow = "hidden"
     }
-    // else{
-    //     OrderMenu.classList.add("closeMenu")
-    // }
 }
 closebutton.onclick = function(){
     OrderMenu.classList.add("closeMenu")
@@ -47,10 +44,11 @@ closebutton.onclick = function(){
 }
 document.addEventListener("click",function(e){
     if(e.target.classList.contains("img")){
-        console.log("yesssimg")
+        // open deatils
     }
 })
 
+// responsive lists fix
 // ordre menu imgs fix
 // add intro section 
 // clean code
