@@ -1,0 +1,49 @@
+*{
+    outline: 1px solid red;
+}
+.chef-detail{
+    min-height: 100vh;
+    padding: 100px 0;
+    background-color: aqua;
+}
+.chef-detail .chef-details{
+    max-width: 600px;
+    width: 100%;
+}
+.chef-detail .chef-details .big-card{
+    width: 900px; 
+    height: 500px;
+    width: 100%;
+    bottom: 110%;
+    left: -50px;
+    background-color: rgb(243, 10, 10);
+}
+.all-chefs .chef{
+    height: 350px;
+    width: 300px;
+    background-color: red;
+    background-size: 100%;
+    background-position: center;
+    transition: .6s ease;
+}
+.all-chefs .chef:hover{
+    background-size: 120%;
+}
+.all-chefs .chef1{
+    background-image: url(/static/imgs/chef11.jpg);
+}
+.all-chefs .chef2{
+    background-image: url(/static/imgs/chef22.jpg);
+}
+.all-chefs .chef3{
+    background-image: url(/static/imgs/chef33.jpg);
+}
+.all-chefs .chef4{
+    background-image: url(/static/imgs/chef44.jpg);
+}
+.all-chefs .chef5{
+    background-image: url(/static/imgs/chef55.jpg);
+}
+.all-chefs .chef6{
+    background-image: url(/static/imgs/chef11.jpg);
+}

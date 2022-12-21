@@ -17,9 +17,17 @@ let GoTop = document.querySelector("button.GoTop")
 let simpleMenu = document.querySelector(".simple-menu")
 let simpleMenuOffestTop = simpleMenu.getBoundingClientRect().top
 
+let countSection = document.querySelector(".count-section")
+let countsectionOffsetTop = countSection.getBoundingClientRect().top
+let counts = document.querySelector(".count-section ul li .number")
+let started = false
 window.onscroll = function(){
     if(window.scrollY >= simpleMenuOffestTop){
         GoTop.style.display = "block"
+        
+    }
+    if(window.scrollY >= countsectionOffsetTop){
+        countON()
     }
     else{
         GoTop.style.display = "none"
@@ -32,7 +40,23 @@ GoTop.onclick = function(){
         behavior:"smooth"
     })
 }
-
+function countON(){
+    if(!started){
+        counts.forEach(element => {
+            startCount(element)
+        }); 
+    }
+    started = true
+}
+function startCount(ele){
+    let goal = ele.dataset.number;
+    let count = setInterval(function(){
+        ele.textContent++
+        if(ele.textContent === goal){
+            clearInterval(count)
+        }
+    },2000/goal)
+}
 
 let landingfood = document.querySelector(".landing .img")
 let i =2
