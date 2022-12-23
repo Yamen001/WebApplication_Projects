@@ -3,6 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name  = 'index'),
-    path('register', views.main, name = 'register'),
+    path('register', views.main, name = 'register'), #!goes to the main website
 ]
-#! mostly done here!

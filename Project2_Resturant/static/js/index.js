@@ -19,7 +19,7 @@ let simpleMenuOffestTop = simpleMenu.getBoundingClientRect().top
 
 let countSection = document.querySelector(".count-section")
 let countsectionOffsetTop = countSection.getBoundingClientRect().top
-let counts = document.querySelector(".count-section ul li .number")
+let counts = document.querySelectorAll(".count-section ul")
 let started = false
 window.onscroll = function(){
     if(window.scrollY >= simpleMenuOffestTop){

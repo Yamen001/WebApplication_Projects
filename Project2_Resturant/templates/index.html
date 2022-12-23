@@ -1,66 +1,3 @@
-<head>
-    <style>
-        .chefs{
-            min-height: 100vh;
-            padding: 50px 0;
-        }
-        .owl-nav{
-            display: none;
-        }
-        .owl-dots{
-            margin: 20px 0;
-        }
-        .chefs .item{
-            height: 425px;
-            width: 325px;
-            background-color: red;
-            position: relative;
-            transition: .6s ease;
-        }
-        .chefs img{
-            height: 100%;
-            pointer-events: none;
-        }
-        .chefs .item .details{
-            position: absolute;
-            bottom: 170px;
-            left: 40px;
-            transition: .6s ease;
-            opacity: 0;
-        }
-        .chefs .item .details .Frontcard{
-            position: absolute;
-            width: 300px;
-            height: 150px;
-            padding: 10px;
-            z-index: 2;
-            background-color: rgb(255, 255, 255);
-            border: 1px solid #aaa;
-            text-align: center;
-        }
-        .chefs .item .details .Frontcard .name{
-            font-family: 'Cookie', cursive;
-            font-size: 50px;
-            color: orange;
-        }
-        .chefs .item .details .Backcard{
-            position: absolute;
-            width: 300px;
-            height: 150px;
-            z-index: 1;
-            top: 10px;
-            left: -10px;
-            background-color: rgb(255, 255, 255);
-
-        }
-        .chefs .item:hover .details{
-            /* display: block; */
-            bottom: 200px;
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
-</head>
 <!-- note...delete the all the code above ...and discommentes....start and end block and extends..when you puch the code -->
 {% extends 'base.html' %}
 {% block content %}
@@ -596,7 +533,7 @@
             </footer>
         </div>
     <!-- data-aos="fade-down" data-aos-once="false" data-aos-duration="000" -->
-{% endblock%}
+{% endblock content %}
 
 
 <!-- stop background video when scroll -->

@@ -84,28 +84,33 @@
 
         <!-- {% block body %} -->
         <div class="chef-detail">
-            <div class="container bg-danger">
-                <div class="roww d-flex flex-wrap justify-content-center bg-info">
+            <div class="container">
+                <div class="roww d-flex flex-wrap justify-content-center">
                     <div class="chef-img">
                         <img src="/static/imgs/chef44.jpg" width="500" alt="">
                     </div>
-                    <div class="chef-details  align-self-end bg-danger">
-                        <div class="big-card position-relative">
+                    <div class="chef-details  align-self-end">
+                        <div class="big-card position-relative p-4">
+                            <h1 class="name">Kareem Safar</h1>
+                            <p class="text-black-50 my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab magni sint suscipit dignissimos perferendis! Quam iure ea esse commodi molestias voluptatum dolores, optio repellendus omnis assumenda veritatis, ratione rerum eligendi!</p>
+                            <ul class="p-0 w-100 mb-4">
+                                <li class="d-flex justify-content-between"><strong>Experience:</strong><p class="w-50 text-black-50"> 5 Years</p></li>
+                                <li class="d-flex justify-content-between"><strong>Email:</strong><p class="w-50 text-black-50"> Kareem@gmail.com</p></li>
+                                <li class="d-flex justify-content-between"><strong>Phone:</strong><p class="w-50 text-black-50"> +963 9334222</p></li>
+                            </ul>
+                            <ul class="socail-media list-unstyled d-flex gap-3">
+                                <li><a class="text-decoration-none" href=""><i class=" rounded-circle fab fa-facebook-f"></i></a></li>
+                                <li><a class="text-decoration-none" href=""><i class=" rounded-circle fab fa-twitter"></i></a></li>
+                                <li><a class="text-decoration-none" href=""><i class=" rounded-circle fab fa-instagram"></i></a></li>
+                                <li><a class="text-decoration-none" href=""><i class=" rounded-circle fab fa-linkedin-in"></i></a></li>
+                                <li><a class="text-decoration-none" href=""><i class=" rounded-circle fab fa-youtube"></i></a></li>
+                            </ul>
                         </div>
-                        <div class="genral-details w-100 bg-gradient">
-                            <ul>
-                                <li>
-                                    <p>Behavior</p>
-                                    <div class="rating"><hr></div>
-                                </li>
-                                <li>
-                                    <p>Passionate</p>
-                                    <div class="rating"><hr></div>
-                                </li>
-                                <li>
-                                    <p>Motive</p>
-                                    <div class="rating"><hr></div>
-                                </li>
+                        <div class="genral-details w-100">
+                            <ul class="list-unstyled px-5 py-1">
+                                <li class="mb-4"><p class="fw-bold mb-3">Behavior</p><div class="rating"><hr class="w-75"><div></li>
+                                <li class="mb-4"><p class="fw-bold mb-3">Passionate</p><div class="rating"><hr class="w-100"></div></li>
+                                <li class="mb-4"><p class="fw-bold mb-3">Motive</p><div class="rating"><hr class="w-50"></div></li>
                             </ul>
                         </div>
                     </div>
@@ -116,21 +121,58 @@
         
         <!-- {% block content %} -->
         <div class="all-chefs">
-            <div class="container">      
-                <div class="row gap-5 justify-content-start">
-                    <div class="chef chef1">
+            <div class="container">   
+                <div class="intro-text text-center">
+                    <h3 class="intro-secTitle m-0 text-center">our Team</h3>
+                    <h1 class=" mb-1 text-center text-black display-5 fw-light">
+                        Meet our chefs
+                    </h1>
+                    <div class="horizontalLine text-center d-inline-block mb-5"></div>
+                </div>   
+                <div class="row gap-5 justify-content-md-start justify-content-center mb-5">
+                    <div class="chef d-flex flex-column">
+                        <div class="chef-img chef1 h-75"></div>
+                        <div class="chef-detail2 w-100 h-25 bg-white d-flex flex-column justify-content-center align-items-center">
+                            <div class="name fs-4 orange">Petter wilson</div>
+                            <div class="work">CEO</div>
+                        </div>
                     </div>
-                    <div class="chef chef2">
+                    <div class="chef d-flex flex-column">
+                        <div class="chef-img chef2 h-75"></div>
+                        <div class="chef-detail2 w-100 h-25 bg-white d-flex flex-column justify-content-center align-items-center">
+                            <div class="name fs-4 orange">Mick jezzy</div>
+                            <div class="work">Worker</div>
+                        </div>
                     </div>
-                    <div class="chef chef3">
+                    <div class="chef d-flex flex-column">
+                        <div class="chef-img chef3 h-75"></div>
+                        <div class="chef-detail2 w-100 h-25 bg-white d-flex flex-column justify-content-center align-items-center">
+                            <div class="name fs-4 orange">Aaron boll</div>
+                            <div class="work">Founder</div>
+                        </div>
                     </div>
                 </div>
-                <div class="row mt-4 gap-5 justify-content-end">
-                    <div class="chef chef4">
+                <div class="row gap-5 justify-content-md-end justify-content-center ">
+                    <div class="chef d-flex flex-column">
+                        <div class="chef-img chef4 h-75"></div>
+                        <div class="chef-detail2 w-100 h-25 bg-white d-flex flex-column justify-content-center align-items-center">
+                            <div class="name fs4 orange">Necklios fallon</div>
+                            <div class="work">Worker</div>
+                        </div>
                     </div>
-                    <div class="chef chef5">
+                    <div class="chef d-flex flex-column">
+                        <div class="chef-img chef5 h-75"></div>
+                        <div class="chef-detail2 w-100 h-25 bg-white d-flex flex-column justify-content-center align-items-center">
+                            <div class="name fs-4 orange">Drake mon</div>
+                            <div class="work">Worker</div>
+                        </div>
                     </div>
-                    <div class="chef chef6">
+                    <div class="chef d-flex flex-column">
+                        <div class="chef-img chef6 h-75"></div>
+                        <div class="chef-detail2 w-100 h-25 bg-white d-flex flex-column justify-content-center align-items-center">
+                            <div class="name fs-4 orange">Josh mistole</div>
+                            <div class="work">Worker</div>
+                        </div>
                     </div>
                 </div>
             </div>
