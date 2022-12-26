@@ -1,14 +1,10 @@
-*{
-    /* outline: 1px solid red; */
-}
+/* end every thing only comments */
 .chef-detail{
     min-height: 100vh;
     padding: 100px 0;
-    /* background-color: aqua; */
 }
 .chef-detail .chef-details{
     max-width: 600px;
-    width: 100%;
 }
 .chef-detail .chef-details .big-card{
     width: 900px; 
@@ -17,22 +13,27 @@
     width: 100%;
     bottom: 30px;
     left: -50px;
-    /* background-color: rgb(243, 10, 10); */
-    background-color: white;
     box-shadow: 0 0 13px rgba(170, 170, 170, 0.479);
+}
+@media (max-width:1200px) {
+    .chef-detail .chef-details .big-card{
+        bottom: 30px;
+        left: 0px;
+        box-shadow:  0 0 0 ;
+    }
+}
+@media(width < 600px) {
+    .chef-detail img{
+        width: 300px;
+    }
 }
 .chef-detail .socail-media li a i{
     width: 40px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 17px;
     background-color: orange;
-    color: white;
 }
 .chef-detail .genral-details ul li .rating{
-    width: 100%;
     height: 4px;
     background-color: rgb(228, 228, 228);
 }
@@ -40,26 +41,21 @@
     z-index: 11;
     height: 4px;
     background-color: rgb(153, 0, 0);
-    border: none;
-    margin: 0;
 }
-
 .all-chefs .horizontalLine{
-    width: 400px;
+    max-width: 500px;
     height: 60px;
-    background-image: url(/static/imgs/HorizontalLine2.png);
+    background-image: url(/static/imgs/HorizontalLine.png);
     background-size: cover;
     background-position: center;
 }
 .all-chefs .chef{
     height: 450px;
     width: 300px;
-    /* background-color: red; */
     box-shadow: 0 5px 10px #aaa;
-    padding: 0;
 }
 .all-chefs .chef .chef-img{
-    width: 100%;
+    /* width: 100%; */
     background-size: 110%;
     background-position: center;
     transition: .6s ease;
@@ -84,17 +80,5 @@
     background-image: url(/static/imgs/chef33.jpg);
 }
 .all-chefs .chef6{
-    background-image: url(/static/imgs/chef3.jpg);
-}
-@media(width < 600px) {
-    .chef-detail .chef-details .big-card{
-        bottom: 30px;
-        left: 0px;
-        /* background-color: rgb(243, 10, 10); */
-        background-color: white;
-        box-shadow: 0 0 13px rgba(170, 170, 170, 0.479);
-    }
-    .chef-detail img{
-        width: 300px;
-    }
+    background-image: url(/static/imgs/chef66.jpg);
 }
