@@ -148,7 +148,6 @@ body{
     left: -40px;
     background-color: gold;
     transform: rotate(-50deg);
-
 }
 
 
@@ -177,7 +176,8 @@ body{
     left: 0;
 }
 .closeMenu{
-    left: -100%;
+    left: 0%;
+    /* ffffffffffffffffffffffffff */
 }
 .orderMenu .container{
     height: 100%;
@@ -195,11 +195,17 @@ body{
     background-Color : rgb(34, 31, 31);
     order: 2;
     overflow-y: scroll;
+    display: none;
+    /* fffffffffffffffffffffffffffffff */
 }
 .bill{
-    max-width: 350px;
+    max-width: 400px;
+    padding: 10px;
     width: 100%;
-    background-color: white;
+    padding: 0 25px 25px;
+    background-Color : rgb(34, 31, 31);
+    min-height:500px;
+
 }
 .img{
     width: 130px;
@@ -214,10 +220,16 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
 }
 .img::before{
     position: absolute;
-    content: "[data-name]";
+    content: attr(data-foodName);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
     width: 100%;
     background-color: rgba(29, 29, 29, 0.644);
     height: 100%;
@@ -227,24 +239,25 @@ body{
     opacity: 0;
     transition:.4s ease;
     color: white;
+    pointer-events: none;
 }
 .img:hover.img::before{
     left: 0%;
     visibility:visible;
     opacity: 1;
 }
-.orderList .lines-spliter{
+.lines-spliter{
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-.orderList .lines-spliter .mini-line{
+.lines-spliter .mini-line{
     width: 90px;
     height: 2px;
     background-color: white;
 }
-.orderList .lines-spliter .orange-line{
+.lines-spliter .orange-line{
     background-color: orange;
 }
 @keyframes rotatefood {
@@ -263,4 +276,70 @@ body{
     100%{
         left: 0px;
     }
+}
+
+.orderedFood-form{
+    display: flex;
+    /* fffffffffffffffffffff */
+    max-width: 600px;
+    width: 100%;
+    min-height:550px;
+    /* height: 100%; */
+    background-Color : rgb(34, 31, 31);
+    order: 2;
+    padding: 20px;
+    transition: .5s ease;
+}
+.orderedFood-form img{
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.size ul button{
+    padding: 5px 10px;
+    margin-left: 20px;
+    background-color: transparent;
+    border: 1px solid orange;
+    color: orange;
+    font-weight: bold;
+    transition: .3s ease;
+}
+
+.size ul button:hover,
+.size ul button.clicked{
+    background-color: orange;
+    color: white;
+}
+/* .size ul button.Notclicked{
+    background-color: transparent;
+    color: orange;
+} */
+.orderedFood-form input , textarea{
+    border: none;
+    outline: none;
+}
+.orderedFood-form input{
+    width: 50px;
+    height: 25px;
+    padding: 3px;
+    background-Color : rgb(34, 31, 31);
+    color: orange;
+    border: 1px solid orange;
+}
+.orderedFood-form textarea{
+    padding: 5px;
+    min-height: 45px;
+    max-height: 55px;
+    background-color: transparent;
+    color: orange;
+    border: 1px solid orange;
+}
+.orderedFood-form .goback{
+    color: orange;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    
 }
