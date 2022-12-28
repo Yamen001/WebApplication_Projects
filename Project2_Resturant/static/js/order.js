@@ -47,27 +47,34 @@ closebutton.onclick = function(){
     orderList.style.display="block"
     OrderedFoodForm.style.display="none"
     refactorFoodList()
+    if(!document.querySelector(".orderMenu .bill .items").textContent === " "){
+        console.log("helo")
+    }
+    
+
 }
 document.addEventListener("click",function(e){
     if(e.target.classList.contains("img")){
         // open deatils
         // console.log(e.target.getAttribute("data-foodName"))
-        let item = e.target 
+        // let choose = e.target 
         // console.log(item.firstElementChild.src)
-        let itemimg = item.firstElementChild.src
-        let itemName = item.getAttribute("data-foodName")
-        console.log(itemimg , itemName)
+        Choosenitem.foodimg = e.target.firstElementChild.src
+        Choosenitem.foodName= e.target.getAttribute("data-foodName")
+        Choosenitem.foodprice = e.target.getAttribute("data-foodPrice")
+        // console.log(itemimg , itemName , itemPrice)
         ToggleLists()
-        SetOrderedFood(itemimg , itemName)
+        SetOrderedFood()
     }
 })
 function ToggleLists(){
     orderList.style.display="none"
     OrderedFoodForm.style.display="flex"
 }
-function SetOrderedFood(itemimg , itemName){
-    orderedFoodImg.src = itemimg
-    orderedFoodName.textContent = itemName
+function SetOrderedFood(){
+    orderedFoodImg.src = Choosenitem.foodimg
+    orderedFoodName.textContent = Choosenitem.foodName
+    orderedFoodPrice.textContent = Choosenitem.foodprice
 }
 
 
@@ -76,13 +83,20 @@ function SetOrderedFood(itemimg , itemName){
 let OrderedFoodForm = document.querySelector(".orderedFood-form")
 let orderedFoodImg = document.querySelector(".orderedFood-form img")
 let orderedFoodName = document.querySelector(".orderedFood-form .FoodName")
+let orderedFoodPrice  = document.querySelector(".orderedFood-form .FoodPrice")
 let orderedFoodinput = document.querySelector('.orderedFood-form input')
 let orderedFoodinput2 = document.querySelector('.orderedFood-form textarea')
 let gobackButton = document.querySelector(".orderedFood-form .goback")
 let sizelist = document.querySelectorAll(".orderedFood-form .orderedFood-info  .size ul li button")
 let order = document.querySelector(".orderedFood-form .button")
 
-
+let Choosenitem = {
+    foodName:"",
+    foodprice:"",
+    foodimg : "",
+    foodsize:"s",
+    foodNumber:"1"
+}
 document.addEventListener("click",function(e){
     if(e.target.classList.contains("sec1")){
         sizelist.forEach((element) => {
@@ -91,6 +105,7 @@ document.addEventListener("click",function(e){
             }  
         })
         e.target.classList.add("clicked")
+        Choosenitem.foodsize = e.target.textContent
     }
 })
 gobackButton.onclick = function(){
@@ -111,13 +126,38 @@ function refactorFoodList(){
     })
 }
 
-
+let AddItem = document.querySelector(".orderedFood-form button.additem")
+AddItem.onclick = function(){
+    Choosenitem.foodNumber = orderedFoodinput.value
+    CreateItem()
+}
 function CreateItem(){
-    let itme = document.createElement("div")
-    item.classList.add(item)
-    // let itemId = 
+    let item = document.createElement("div")
+    item.className = "item"
+
+    let itemid = document.createElement("span")
+    itemid.className = "item-id"
+    itemid.textContent = 0  
+
     let itemName = document.createElement("span")
     itemName.className = "itme-name"
+    itemName.textContent = Choosenitem.foodName
+
+    let itemnumber = document.createElement("span")
+    itemnumber.className = "itme-number"
+    itemnumber.textContent = Choosenitem.foodNumber
+
+    let itemPrice = document.createElement("span")
+    itemPrice.className = "itme-price"
+    itemPrice.textContent = (+Choosenitem.foodNumber * +Choosenitem.foodprice)
+    item.appendChild(itemid)
+    item.appendChild(itemName)
+    item.appendChild(  itemnumber)
+    item.appendChild( itemPrice)
+    document.querySelector(".orderMenu .bill .items").appendChild(item)
+    orderList.style.display="block"
+    OrderedFoodForm.style.display="none"
+    refactorFoodList()
 }
 // responsive lists fix
 // ordre menu imgs fix

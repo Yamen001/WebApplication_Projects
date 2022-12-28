@@ -155,13 +155,15 @@ body{
 .orderMenu{
     position: fixed;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.774);
     top: 0px;
     left: 0%;
     transition: .6s ease;
-    padding: 30px 0;
+    padding: 0px 0;
     z-index: 11111;
+    overflow-y: scroll;
 }
 .orderMenu button.closeButton{
     position: absolute;
@@ -172,11 +174,8 @@ body{
     border: none;
     font-size: 40px;
 }
-.openMenu{
-    left: 0;
-}
 .closeMenu{
-    left: 0%;
+    left: -100%;
     /* ffffffffffffffffffffffffff */
 }
 .orderMenu .container{
@@ -195,7 +194,7 @@ body{
     background-Color : rgb(34, 31, 31);
     order: 2;
     overflow-y: scroll;
-    display: none;
+    display: flex;
     /* fffffffffffffffffffffffffffffff */
 }
 .bill{
@@ -279,7 +278,7 @@ body{
 }
 
 .orderedFood-form{
-    display: flex;
+    display: none;
     /* fffffffffffffffffffff */
     max-width: 600px;
     width: 100%;
@@ -342,4 +341,12 @@ body{
     border: none;
     font-size: 30px;
     
+}
+.orderMenu .bill .items .item{
+    display: flex;
+    justify-content: space-between;
+}
+.orderMenu .bill .items span{
+    width: 50px;
+    height: 30px;
 }
