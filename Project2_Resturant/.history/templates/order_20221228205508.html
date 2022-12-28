@@ -24,7 +24,7 @@
                             <a class="nav-link text-white" href="{% url 'blog' %}">Blogs</a>
                         </li>
                         <li class="nav-item align-self-center mb-3 mb-md-0">
-                            <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a>
+                            <a class="nav-link text-white" href="{% url 'contact ' %}">Contact Us</a>
                         </li>
                     </ul>
                     <div class="d-flex align-items-center justify-content-center mb-3 mb-lg-0">
@@ -33,7 +33,7 @@
                         <a href="accounts/logout" class="logout text-decoration-none border-1 border-white btn text-white">logout</a>
                         {% else %}
                             <a href="{% url 'login' %}" id="login" class="border-1 border-white btn text-decoration-none me-3 text-white">Log in</a>
-                            <a href="{% url 'register' %} " id="signup" class="border-1 border-white btn text-decoration-none text-white">Sign up</a>
+                            <a href="accounts/register" id="signup" class="border-1 border-white btn text-decoration-none text-white">Sign up</a>
                             {% endif%}
                     </div>
                 </div>
@@ -286,7 +286,7 @@
                         </div>
                     </div>
                 </div>
-                <a id="appointment" href = "{% url 'index' %}">Maka an appointment</a>
+                <button id="appointment">Maka an appointment</button>
                 <button id="orderNow">Order Now</button>
             </div>
         </div>

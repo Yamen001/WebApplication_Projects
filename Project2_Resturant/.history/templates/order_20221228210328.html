@@ -288,6 +288,9 @@
                 </div>
                 <a id="appointment" href = "{% url 'index' %}">Maka an appointment</a>
                 <button id="orderNow">Order Now</button>
+                {% if user is user.is_authenticated%}
+                    {if message.success }
+                    <script>alert(message.success
             </div>
         </div>
 
