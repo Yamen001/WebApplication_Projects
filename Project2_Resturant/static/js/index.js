@@ -19,19 +19,20 @@ let simpleMenuOffestTop = simpleMenu.getBoundingClientRect().top
 
 let countSection = document.querySelector(".count-section")
 let countsectionOffsetTop = countSection.getBoundingClientRect().top
-let counts = document.querySelectorAll(".count-section ul")
+let counts = document.querySelectorAll(".count-section ul li .roww .number")
 let started = false
 window.onscroll = function(){
+    if(window.scrollY >= countsectionOffsetTop - 200){
+        countON()
+    }
     if(window.scrollY >= simpleMenuOffestTop){
         GoTop.style.display = "block"
         
     }
-    if(window.scrollY >= countsectionOffsetTop){
-        countON()
-    }
     else{
         GoTop.style.display = "none"
     }
+    console.log("hello")
 }
 // onclick works...because GoTopbutton is an existing element inside the html
 GoTop.onclick = function(){
@@ -50,12 +51,13 @@ function countON(){
 }
 function startCount(ele){
     let goal = ele.dataset.number;
+    console.log(goal)
     let count = setInterval(function(){
         ele.textContent++
         if(ele.textContent === goal){
             clearInterval(count)
         }
-    },2000/goal)
+    },(1000/goal))
 }
 
 let landingfood = document.querySelector(".landing .img")
@@ -73,7 +75,7 @@ setInterval(() => {
     landingfood.appendChild(img)
     i++
 }, 10000);
-console.log("test")
+// console.log("test")
 // start comment section
 let comments = [
     {
@@ -149,4 +151,4 @@ function aftercomment(){
 
 
 // prepare tow buttons ..clean your js code ... fix the footer resposivity
-console.log("hello test")
+// console.log("hello test")

@@ -161,7 +161,7 @@ body{
     top: 0px;
     left: 0%;
     transition: .6s ease;
-    padding: 0px 0;
+    padding: 40px 0;
     z-index: 11111;
     overflow-y: scroll;
 }
@@ -190,9 +190,9 @@ body{
 .orderList{
     max-width: 600px;
     width: 100%;
-    height:600px;
+    min-height:600px;
+    height: 100%;
     background-Color : rgb(34, 31, 31);
-    order: 2;
     overflow-y: scroll;
     display: flex;
     /* fffffffffffffffffffffffffffffff */
@@ -203,10 +203,10 @@ body{
     width: 100%;
     padding: 0 25px 25px;
     background-Color : rgb(34, 31, 31);
-    min-height:500px;
+    min-height:550px;
 
 }
-.img{
+.orderList .img{
     width: 130px;
     background-color: red;
     height: 100px;
@@ -215,13 +215,13 @@ body{
     background-size: cover;
     cursor: pointer;
 }
-.img img{
+.orderList .img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     pointer-events: none;
 }
-.img::before{
+.orderList .img::before{
     position: absolute;
     content: attr(data-foodName);
     display: flex;
@@ -252,48 +252,40 @@ body{
     gap: 20px;
 }
 .lines-spliter .mini-line{
-    width: 90px;
+    max-width: 90px;
+    width: 100%;
     height: 2px;
     background-color: white;
 }
 .lines-spliter .orange-line{
     background-color: orange;
 }
-@keyframes rotatefood {
-    0%{
-        left: 0px;
-    }
-    25%{
-        left: 60px;
-    }
-    50%{
-        left: 0px;
-    }
-    75%{
-        left: 60px;
-    }
-    100%{
-        left: 0px;
-    }
-}
-
 .orderedFood-form{
     display: none;
     /* fffffffffffffffffffff */
     max-width: 600px;
     width: 100%;
-    min-height:550px;
+    min-height:560px;
     /* height: 100%; */
     background-Color : rgb(34, 31, 31);
-    order: 2;
     padding: 20px;
     transition: .5s ease;
 }
+.orderList::-webkit-scrollbar{
+    width: 0px;
+}
+::-webkit-scrollbar-track{
+    background-Color : rgba(20, 20, 20, 0.096);
+}
+::-webkit-scrollbar-thumb{
+    background-color: orange;
+    border-radius: 3px;
+}
 .orderedFood-form img{
-    width: 240px;
-    height: 240px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 .size ul button{
     padding: 5px 10px;

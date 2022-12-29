@@ -6,17 +6,17 @@
 #navigator li:hover{
     background-color: rgb(231, 231, 231);
 }
-input,textarea{
+.blog input,textarea{
     border: 1px solid #ccc;
     outline: none;
     transition: .6s ease;
     caret-color: orange;
     cursor: pointer;
 }
-input:hover , textarea:hover{
+.blog input:hover ,.blog textarea:hover{
     border: 1px solid orange;
 }
-textarea{
+.blog textarea{
     width: 100%;
     max-height: 200px;
     min-height: 150px;
@@ -43,7 +43,7 @@ textarea{
 .tag:hover{
     background-color: rgb(231, 231, 231);
 }
-h4{
+.blog h4{
     border-left: 3px solid orange;
 }
 .img-gradiant .layer{

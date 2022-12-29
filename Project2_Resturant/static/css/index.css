@@ -53,25 +53,6 @@ h1{
     margin: 0 auto;
     max-width: 460px;
 }
-.order-fixed{
-    width: fit-content;
-    background-color: orange;
-    padding: 3px 10px;
-    z-index: 100;
-    color: white;
-    top: 150px;
-    cursor: pointer;
-    left: -99px;
-    transition: .2s linear;
-    border-radius: 10px;
-}
-.order-fixed:hover{
-    left: 0;
-    background-color: rgb(243, 159, 3);
-}
-.order-fixed p,.order-fixed a{
-    pointer-events: none;
-}
 .GoTop{
     z-index: 100;
     right: 30px;
@@ -100,6 +81,16 @@ h1{
     100%{
         transform: rotate(360deg);
     }
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-Color : rgba(20, 20, 20, 0.096);
+}
+::-webkit-scrollbar-thumb{
+    background-Color : rgba(40, 40, 40, 0.575);
+    border-radius: 3px;
 }
 nav{
     top: 0px;
@@ -594,5 +585,12 @@ footer .socail-media li a i{
 }
 
 .count-section{
-    background-color: red;
+    min-height: 50vh;
+}
+.count-section li {
+    width: 200px;
+    height: 100px;
+}
+.count-section li .roww{
+    width: 60%;
 }

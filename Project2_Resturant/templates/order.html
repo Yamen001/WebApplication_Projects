@@ -67,10 +67,10 @@
                 <!-- <div class="flyingfood fy3"></div> -->
                 <!-- <div class="flyingfood fy4"></div> -->
                 <div class="list-toggler d-flex flex-wrap justify-content-center mb-5 gap-3 mb-3">
-                    <div class="sec  checked breakfast text-center text-black d-flex flex-column align-items-center"><p>Breakfast</p><div class="icon icon1"></div></div>
-                    <div class="sec lunch text-center text-black d-flex flex-column align-items-center"><p>Lunch</p><div class="icon icon2"></div></div>
-                    <div class="sec dinner text-center text-black d-flex flex-column align-items-center"><p>Dinner</p><div class="icon icon3"></div></div>
-                    <div class="sec dessert text-center text-black d-flex flex-column align-items-center"><p>Desert</p><div class="icon icon4"></div></div>
+                    <div class="sec  checked breakfast text-center text-black d-flex flex-column align-items-center"><p class="mb-0">Breakfast</p><div class="icon icon1"></div></div>
+                    <div class="sec lunch text-center text-black d-flex flex-column align-items-center"><p class="mb-0">Lunch</p><div class="icon icon2"></div></div>
+                    <div class="sec dinner text-center text-black d-flex flex-column align-items-center"><p class="mb-0">Dinner</p><div class="icon icon3"></div></div>
+                    <div class="sec dessert text-center text-black d-flex flex-column align-items-center"><p class="mb-0">Desert</p><div class="icon icon4"></div></div>
                 </div>
                 <div class="lists">
                     <div class="list breackfast gap-2 gap-md-4 d-flex justify-content-center flex-wrap">
@@ -296,26 +296,32 @@
             <button class="closeButton">X</button>
             <div class="container d-flex">
                 
-                <div class="bill text-white d-flex flex-column justify-content-between">
+                <div class="bill order-5 order-xlg-0 text-white d-flex flex-column justify-content-between">
                     <div class="bill-details">
                         <div class="logo d-flex align-items-center ">
                             <img src="/static/imgs/logo2.png" width="80" alt="">
                             <p class="specail-title display-5 mb-0">BurgerHouse</p>
                         </div>
                         <h5>BILL</h5>
-                        <div>location addres</div>
-                        <div>orderhours</div>
+                        <!-- <div class="roww">
+                            <label for="">confirm Password</label>
+                            <input type="text">
+                        </div>
+                        <div class="roww">
+                            <label for="">Phone</label>
+                            <input type="number">
+                        </div> -->
+                        <div class="items">
+                            <p></p>
+                            <!-- <div class="item d-flex justify-content-between">
+                                <span class="item-id">2</span>
+                                <span class="itme-name">Pizza</span>
+                                <span class="item-number">3</span>
+                                <span class="item-price">3000</span>
+                            </div> -->
+                        </div>
                     </div>
                     
-                    <div class="items">
-                        <p></p>
-                        <!-- <div class="item d-flex justify-content-between">
-                            <span class="item-id">2</span>
-                            <span class="itme-name">Pizza</span>
-                            <span class="item-number">3</span>
-                            <span class="item-price">3000</span>
-                        </div> -->
-                    </div>
                     <div class="total">
                         <hr>
                         <div>
@@ -437,21 +443,14 @@
 
                 <div class="orderedFood-form position-relative  flex-column gap-4">
                     <button class="position-absolute p-2 top-0 goback"><i class="fas fa-arrow-left"></i></button>
-                    <div class="orderFood-img d-flex gap-3">
+                    <div class="orderFood-img d-flex flex-sm-nowrap justify-content-sm-start justify-content-center flex-wrap gap-3">
                         <img src="/static/imgs/burger1.jpg" alt="">
-                        <div class="card align-self-center bg-transparent">
+                        <div class="card align-self-center bg-transparent border-0 ">
                             <div class="fs-5"><span class="orange">Name:</span>  <span class="FoodName text-white">Pizza 1</span></div>
                             <div class="fs-5"><span class="orange">price:</span>  <span class="FoodPrice text-white"></span></div>
                             <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae ratione doloribus.</p>
                         </div>
                     </div>
-                    <!-- <div class="lines-spliter mt-0">
-                        <div class="mini-line orange-line"></div>
-                        <div class="mini-line white-line"></div>
-                        <div class="mini-line orange-line"></div>
-                        <div class="mini-line white-line"></div>
-                        <div class="mini-line orange-line"></div>
-                    </div> -->
                     <div class="orderedFood-info d-flex flex-column gap-3 px-3">
                         <div class="size d-flex align-items-center justify-content-between w-50">
                             <label class="orange fs-5">Size: </label>

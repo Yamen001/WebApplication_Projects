@@ -2,44 +2,10 @@
 {% block title %}Chefs{% endblock title %}
 {% load static %}
 {% block body %}
-
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-0 position-fixed w-100 text-white">
-            <div class="container">
-                <img src="/static/imgs/logo2.png" class=" navbar-brand me-5" alt="">
-                <!-- <a class="navbar-brand me-5" href="#"></a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse text-white pb-4 pb-md-0" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 justify-content-center gap-3">
-                        <li class="nav-item align-self-center">
-                            <a class="nav-link text-white" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li class="nav-item align-self-center">
-                            <a class="nav-link text-white" href="{% url 'about' %}">About Us</a>
-                        </li>
-                        <li class="nav-item align-self-center">
-                            <a class="nav-link text-white" href="{% url 'chefs' %}">Chefs</a>
-                        </li>
-                        <li class="nav-item align-self-center mb-3 mb-md-0">
-                            <a class="nav-link text-white" href="{% url 'blog' %}">Blogs</a>
-                        </li>
-                        <li class="nav-item align-self-center mb-3 mb-md-0">
-                            <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex align-items-center justify-content-center mb-3 mb-lg-0">
-                        {% if user.is_authenticated %}
-                        <li class="me-3 list-unstyled">{{user.first_name}}</li>
-                        <a href="accounts/logout" class="logout text-decoration-none border-1 border-white btn text-white">logout</a>
-                        {% else %}
-                            <a href="accounts/login" id="login" class="border-1 border-white btn text-decoration-none me-3 text-white">Log in</a>
-                            <a href="accounts/register" id="signup" class="border-1 border-white btn text-decoration-none text-white">Sign up</a>
-                            {% endif%}
-                    </div>
-                </div>
-            </div>
-        </nav>
+    <button class="GoTop position-fixed bg-transparent border-0">
+        <div class="borderRotate rounded-circle"></div>
+        <i class="arrow position-absolute text-white rounded-circle fas fa-arrow-up"></i>
+    </button>
         <div class="chef-detail">
             <div class="container">
                 <div class="roww d-flex flex-wrap justify-content-center">
