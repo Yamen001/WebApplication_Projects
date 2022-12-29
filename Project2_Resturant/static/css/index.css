@@ -258,7 +258,7 @@ nav .navbar-nav li{
     outline: none;
 }
 .Comments{
-    margin: 100px 0;
+    margin: 100px 0 0;
     height: 75vh;
     background-image: url(/static/imgs/test2.jpg);
     background-position: center;
@@ -457,7 +457,7 @@ nav .navbar-nav li{
     }
     
 }
-/* display flex dose not effect an absolumte child  */
+/* display flex dose not effect an absolumte child  but not the relative*/
 /* margin dose not effect an element with translateX , translateY effect */
 /* 
 .savinglayer .chefs{
@@ -490,6 +490,7 @@ footer::before{
 footer .container{
     position: relative;
     z-index: 2;
+    padding: 0 0 20px;
 }
 footer .logo{
     width: 100px;
@@ -528,6 +529,7 @@ footer .socail-media li a i{
     min-height: 100vh;
     padding: 50px 0;
 }
+
 .owl-nav{
     display: none;
 }
@@ -585,7 +587,10 @@ footer .socail-media li a i{
 }
 
 .count-section{
-    min-height: 50vh;
+    min-height: 60vh;
+    /* padding: 100px 0; */
+
+
 }
 .count-section li {
     width: 200px;

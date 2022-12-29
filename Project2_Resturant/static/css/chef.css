@@ -2,10 +2,21 @@
 /* fix all socalmedias */
 .chef-detail{
     min-height: 100vh;
-    padding: 100px 0;
+    padding: 170px 0 50px;
+    background-image: url(/static/imgs/test6.jpg);
+    background-size: cover;
+    background-position: left ;
 }
 .chef-detail .chef-details{
     max-width: 600px;
+    background: white;
+}
+.chef-detail .chef-img{
+    width: 500px;
+}
+.chef-img img{
+    width: 100%;
+    /* height: 100%; */
 }
 .chef-detail .chef-details .big-card{
     width: 900px; 
@@ -23,8 +34,13 @@
         box-shadow:  0 0 0 ;
     }
 }
+@media(width < 1200px) {
+    .chef-detail .chef-img{
+        width: 380px;
+    }
+}
 @media(width < 600px) {
-    .chef-detail img{
+    .chef-detail .chef-img{
         width: 300px;
     }
 }

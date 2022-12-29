@@ -1,3 +1,7 @@
+.blog{
+    padding: 0px 0 20px;
+    margin-top: 80px;
+}
 #navigator li{
     cursor: pointer;    
     transition: .6s ease;
