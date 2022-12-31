@@ -47,7 +47,7 @@ h1{
 .intro-secTitle{
     color:orange;
     font-family: 'Cookie', cursive;
-    font-size: 3rem;
+    font-size: 2.4rem;
 }
 .intro-text p{
     margin: 0 auto;
@@ -258,7 +258,7 @@ nav .navbar-nav li{
     outline: none;
 }
 .Comments{
-    margin: 100px 0 0;
+    margin: 100px 0 50px;
     height: 75vh;
     background-image: url(/static/imgs/test2.jpg);
     background-position: center;
