@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.conf import settings
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -18,3 +19,6 @@ def chefs(request):
 
 def order(request):
     return render(request, 'order.html')
+
+def error_404_view(request,exception):
+    return render(request, '404_error.html')
