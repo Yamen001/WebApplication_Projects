@@ -10,11 +10,7 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
-def main(request):
-    template = loader.get_template('main.html')
-    return HttpResponse(template.render())
-
-def login(request):
+def Auth(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -55,3 +51,6 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+def login(request):
+    return render(request, 'login.html')
