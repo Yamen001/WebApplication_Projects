@@ -11,19 +11,9 @@
     <body>
         <form  action = "logins" method = "POST">
             {% csrf_token %}
-            <div>
-                <span class="username">Username :</span>
-                <input class="w-100 text-white bg-transparent" type = "text" name = "first_name" placeholder = "first_name"><br>
-            </div>
-            <div>
-                <span class="password">password :</span>
-                <input class="w-100 text-white bg-transparent"  type = "password" name = "last_name" placeholder ="last_name"><br>
-                <a class="orange link" href="">forget password?</a>
-            </div>
-            <div>
-                <input class="orange fw-bold" type = "submit">
-                <a class="orange" href="{% url 'index' %}">Create an account</a>
-            </div>
+            <input type = "text" name = "username" placeholder = "username"><br>
+            <input type = "password" name = "password" placeholder = "password"><br>
+            <input type = "submit">
         </form>
     </body>
 </html>

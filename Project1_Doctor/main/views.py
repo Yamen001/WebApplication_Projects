@@ -7,29 +7,29 @@ from django.contrib import messages
 def index(request):
     return render(request, 'index.html')
 
-def registeration(request):
-    return render(request, 'login.html')
+# def registeration(request):
+#     return render(request, 'login.html')
 
-def home(request):
-    return render(request, 'main.html')
+# def home(request):
+#     return render(request, 'main.html')
 
 def login(request):
     return render(request,'login.html')
 
 def logins(request):
     if request.method == "POST":
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        user = auth.authenticate(first_name = first_name, last_name = last_name)
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.authenticate(username = username, password = password)
         if user is not None:
             auth.login(request, user)
-            return render('main.html')
+            return render(request, 'main.html')
         else:
-            messages.info(request, 'invalid password')
+            # print(f'not found {user} and {username} and {password}')
             return render(request, 'login.html')
     else:
         return render('index.html')
-     
+
 def register(request):
     if request.method == 'POST':
         username = request.POST['username']
