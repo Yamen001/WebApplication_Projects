@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 from pathlib import Path
+from environ import environ # for enviroment variables
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'main.apps.MainConfig',
     "django.contrib.admin",
     "django.contrib.auth",
@@ -81,6 +84,21 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+##########################
+########################## DATABSE CONNECTION ISSUES #########################
+##########################
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': ,
+#        'USER': 'postgre',
+#        'PASSWORD': '1234',
+#        'PORT': '5432',
+#    }
+#}
+
+
 
 
 # Password validation
