@@ -80,23 +80,14 @@ WSGI_APPLICATION = "home.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ResturantDB', 
+        'USER': 'manager', 
+        'PASSWORD': 'manager',
+        'HOST': '127.0.0.1', 
+        'PORT': '5432',
     }
 }
-
-##########################
-########################## DATABSE CONNECTION ISSUES #########################
-##########################
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': ,
-#        'USER': 'postgre',
-#        'PASSWORD': '1234',
-#        'PORT': '5432',
-#    }
-#}
 
 
 
