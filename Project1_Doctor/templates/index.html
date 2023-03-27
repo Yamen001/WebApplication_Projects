@@ -1,4 +1,14 @@
-{% block body %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+<body>
 <form class="d-flex flex-column gap-3 justify-content-center align-items-center p-4 px-sm-5 px-4" action="register"  method='POST'>
     {% csrf_token %}
     <p class="text-white fs-3 text-center">Sign Up</p>
@@ -35,7 +45,8 @@
     </div>
     <button class="align-self-center px" type="submit">Let's Eat</button>
     <div>
-        <a href="{% url 'login' %}">Alread Have an Acount</a>
+        <a href="{% url 'logins' %}">Already Have an Acount</a>
     </div>
 </form> 
-{% endblock body %}
+</body>
+</html>

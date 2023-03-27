@@ -74,8 +74,8 @@
                         <li class="me-3 list-unstyled">{{user.first_name}}</li>
                         <a href="{% url 'logout' %}" class="logout text-decoration-none border-1 border-white btn text-white">logout</a>
                         {% else %}
-                            <a href="{% url 'login' %}" id="login" class="border-1 border-white btn text-decoration-none me-3 text-white">Log in</a>
-                            <a href="{% url 'register' %}" id="signup" class="border-1 border-white btn text-decoration-none text-white">Sign up</a>
+                            <a href="{% url 'logins' %}" id="login" class="border-1 border-white btn text-decoration-none me-3 text-white">Log in</a>
+                            <a href="{% url 'Signup' %}" id="signup" class="border-1 border-white btn text-decoration-none text-white">Sign up</a>
                             {% endif%}
                     </div>
                 </ul>

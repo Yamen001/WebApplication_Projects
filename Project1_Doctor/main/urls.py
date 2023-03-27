@@ -2,13 +2,9 @@ from django.urls import include, path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name  = 'index'),
-    path('index', views.index, name = 'index'),
-    
-    #! testing urls
-    path('logins', views.index, name = 'logins'),
+    path('', views.index, name  = 'index'),    
     path('register', views.register, name = 'register'),
-    path('login', views.login, name = 'login'),
     path('logout', views.logout, name = 'logout'),
-    path('main', views.main, name = 'main'),
+    path('logins', views.logins, name = 'logins'),
+    path('Signup', views.Signup, name = 'Signup'),
 ]
