@@ -63,7 +63,6 @@
             </div>
             <nav>
                 <ul>
-                    <!-- ><h4>{{username}}</h4> not working not working -->
                     <li><a id="active" href="#home">Home</a></li>
                     <li><a href="#serv">Services</a></li>
                     <li><a href="#about">About Us</a></li>
@@ -71,10 +70,10 @@
                     <li><a href="#">Contact Us</a></li>
                     <div class="d-flex align-items-center justify-content-center mb-3 mb-lg-0">
                         {% if user.is_authenticated %}
-                        <li class="me-3 list-unstyled">{{user.first_name}}</li>
+                        <li class="me-3 list-unstyled">{{user.username}}</li>
                         <a href="{% url 'logout' %}" class="logout text-decoration-none border-1 border-white btn text-white">logout</a>
                         {% else %}
-                            <a href="{% url 'logins' %}" id="login" class="border-1 border-white btn text-decoration-none me-3 text-white">Log in</a>
+                            <a href="{% url 'required_login' %}" id="login" class="border-1 border-white btn text-decoration-none me-3 text-white">Log in</a>
                             <a href="{% url 'Signup' %}" id="signup" class="border-1 border-white btn text-decoration-none text-white">Sign up</a>
                             {% endif%}
                     </div>
