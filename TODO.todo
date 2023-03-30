@@ -1,9 +1,1 @@
 TODO
-
-I) url mapping for login - logout - SignIn.
-
-II) authenticate unfilling form in SignIn and very possibly login as well.
-
-III) checking on database work and its data.
-
-IIII) checking on our models and configuration files.

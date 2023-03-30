@@ -29,7 +29,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'register',
     'main',
     "django.contrib.admin",
     "django.contrib.auth",
@@ -127,3 +126,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATIC_URL = '/static/'
+# LOGIN_REDIRECT_URL = '/'
+# LOGIN_URL = '/main'
