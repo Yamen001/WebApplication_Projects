@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- style link -->
+        <link rel="stylesheet" href="/css/loging.css">
+        <!-- font awsome library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- specail title fontfamily -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+        <!-- bootstrap link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+    </head>
+    <body class="px-3">
+        <div class="d-flex justify-content-center">
+            <div class="logo"></div>
+        </div>
+        <h1 class="text-center orange display-2 mb-4">Burgertory</h1>
+        <div class="container">
+            <div class="row justify-content-center gap-5">
+                <div class="container1 order-1 order-lg-0 text-white col-12 col-lg-6 border-1 border-white border p-sm-5 px-sm-5 p-3">
+                    <h3>Apply for Membership</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing .eniam culpa reprehenderit neque tenetur, ut molestias, nam delectus voluptatem quasi esse optio? Provident.</p>
+                    <div class="lines d-flex flex-column gap-4 mt-4 mb-5">
+                        <div class="line-check d-flex align-items-center gap-2 ps-5">
+                            <i class="fa fa-solid fa-check"></i>
+                            <p class="mb-0 fw-light">Search local branch inventroy</p>
+                        </div>
+                        <div class="line-check d-flex align-items-center gap-2 ps-5">
+                            <i class="fa fa-solid fa-check"></i>
+                            <p class="mb-0 fw-light">Creat a shoping list or order guide</p>
+                        </div>
+                        <div class="line-check d-flex align-items-center gap-2 ps-5">
+                            <i class="fa fa-solid fa-check"></i>
+                            <p class="mb-0 fw-light">Use online ordering services</p>
+                        </div>
+                        <div class="line-check d-flex align-items-center gap-2 ps-5">
+                            <i class="fa fa-solid fa-check"></i>
+                            <p class="mb-0 fw-light">Get copies of receipts</p>
+                        </div>
+
+                    </div>
+                    <button class="w-100 p-3 bg-transparent text-white border border-1 border-white">Apply Now</button>
+                </div>
+                <div class="container2 p-4 py-4 col-lg-5 order-0 order-lg-1">
+                    <h3 class="text-white text-capitalize">logIn</h3>
+                    <form  action = "login" method = "POST">
+                        {% csrf_token %}
+                        <div class="rows text-start text-white">
+                            <span class="username">Username :</span>
+                            <input class="w-100 text-white bg-transparent" type = "text" autocomplete="off" name = "username" required maxlength="10"  placeholder = "username"><br>
+                        </div>
+                        <div class="rows text-start text-white">
+                            <span class="password">password :</span>
+                            <input class="w-100 text-white bg-transparent"  type = "password" autocomplete="off" name = "password" required placeholder ="password"><br>
+                            <a class="orange link" href="">forget password?</a>
+                        </div>
+                        <div class="Lastrow text-center">
+                            <input class="orange fw-bold" type = "submit">
+                            <a class="orange" href="{% url 'register' %}">Creat an account</a>
+                        </div>
+                        <ul class="list-unstyled position-absolute d-flex justify-content-center">
+                            <li><a href="#"><i class="d-flex justify-content-center align-items-center bg-transparent fa fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="d-flex justify-content-center align-items-center bg-transparent fa fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="d-flex justify-content-center align-items-center bg-transparent fa fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer class="position-absolute bottom-0 text-white ms-auto w-100 py-3">
+            <ul class="d-flex flex-wrap gap-2  justify-content-center gap-lg-5 list-unstyled mb-0">
+                <li>&copy; 2022 Resturant. All Rights Reserved.</li>
+                <li class="fw-bold"><a class="text-white text-decoration-none" href="">Privacy</a> </li>
+                <li class="fw-bold"><a class="text-white text-decoration-none" href="">Terms & Condtions </a></li>
+                <li class="fw-bold"><a class="text-white text-decoration-none" href="">Website Terms of Use </a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
