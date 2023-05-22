@@ -1,0 +1,32 @@
+.about-us {
+    padding: 50px 0 0;
+    margin-top: 50px;
+}
+section.tow{
+    min-height: 90vh;
+    padding: 100px 0;
+    position: relative;
+}
+section.tow::before{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background-image: url(/imgs/about-patron.jpg);
+    background-size: contain;
+    border-radius: 0 50% 50% 0;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+section.tow .left .card {
+    background-color: transparent;
+    color: white;
+    background-color: rgb(239, 61, 61);
+    padding: 10px;
+
+    /* max-width: 200px; */
+}
+section.tow .left .card .icon{
+    /* max-width: 200px; */
+}

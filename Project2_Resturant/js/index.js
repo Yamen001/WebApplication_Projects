@@ -68,7 +68,7 @@ setInterval(() => {
     }
     landingfood.removeChild(landingfood.firstElementChild)
     let img = document.createElement("img")
-    img.setAttribute("src",`/static/imgs/landingfood${i}.png`)
+    img.setAttribute("src",`/imgs/landingfood${i}.png`)
     img.setAttribute("data-aos","fade-left")
     img.setAttribute("data-aos-once","true")
     img.setAttribute("data-aos-duration","2000")

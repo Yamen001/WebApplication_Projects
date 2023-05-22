@@ -1,123 +1,386 @@
-{% extends 'base.html' %}
-{% block title %}About{% endblock title %}
-
-{% block body %}
 <!-- <h4 style = 'padding-top: 200px';>this is my about page.. there is a padding-top: 200px to get this appearing here<br> because if not the h4 will be behind the nav</h4> -->
 <!--  -->
-<div class="about-us ">
-    <div class="container">
-        <div class="intro-text">
-            <h3 class="intro-secTitle m-0 text-center">Contact Us</h3>
-            <h1 class=" mb-1 text-center text-black display-6 fw-bold">
-                Get In Touch
-            </h1>
-            <p class="text-center my-4 text-black-50" style="max-width:800px;">!
-                Lorem ipsum dolor sit amet. Iste quasi soluta quam  nam laborum deserunt voluptatibus nesciunt nisi et mollitia veritatis optio deleniti qui voluptatum, ad facere alias?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae impedit a obcaecati non voluptas delectus iste itaque? Molestiae deleniti placeat rem, dolorum, facilis veritatis alias numquam voluptatum, fuga soluta accusamus!
-            </p>
-        </div>   
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="/static/imgs/aboutus1.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="/static/imgs/aboutus2.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="/static/imgs/aboutus3.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="/static/imgs/test.jpg" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About us</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+    <!-- fontAwsome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- style file -->
+    <link rel="stylesheet" type="text/css" href="/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/css/aboutus.css" />
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+    <!-- AOS library for the animation while scrolling -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- specail title fontfamily -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet" />
+
+    <!-- animate.css library -->
+    <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- swiper js  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark px-5 py-0 position-fixed w-100 text-white">
+        <div class="container">
+            <img src="/imgs/logo2.png" class="navbar-brand me-5" alt="" />
+            <!-- <a class="navbar-brand me-5" href="#"></a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-white pb-4 pb-md-0" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 justify-content-center gap-3">
+                    <li class="nav-item align-self-center">
+                        <a class="nav-link text-white" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item align-self-center">
+                        <a class="nav-link text-white" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item align-self-center">
+                        <a class="nav-link text-white" href="chefs.html">Chefs</a>
+                    </li>
+                    <li class="nav-item align-self-center mb-md-0">
+                        <a class="nav-link text-white" href="blog.html">Blogs</a>
+                    </li>
+                    <li class="nav-item align-self-center mb-md-0">
+                        <a class="nav-link text-white" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center justify-content-center mb-3 mb-lg-0">
+                    <a href="login.html" id="login"
+                        class="border-1 border-white btn text-decoration-none me-3 text-white">Log in</a>
+                    <a href="register.html" id="signup"
+                        class="border-1 border-white btn text-decoration-none text-white">Sign up</a>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+
+
         </div>
-        <p class="mt-3 text-black-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima culpa nemo natus incidunt sed qui exercitationem veniam dolor. Ex debitis est quidem itaque molestias iste tempora non, numquam consectetur sint?</p>
-        <p class="text-black-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae recusandae vel, perferendis exercitationem, minima unde ipsa molestias tempore consequuntur qui dolore quibusdam id soluta dolorum eum corrupti cumque? Quasi, consequatur?</p>
-    </div>
-</div>
-<!-- start of AboutCards section -->
-<div class="AboutCards">
-    <div class="container bg-danger">
-        <div class="roww d-flex bg-info justify-content-end">
-            <div class="card-holder bg-danger  position-relative " style="width:500px;">
-                <div class="card position-absolute bg-white">
-                    <div class="left-card"></div>
-                    <div class="header cookie">
-                        our Breave
+    </nav>
+
+
+    <div class="about-us ">
+        <section class="one py-4">
+            <div class="container">
+                <div class="row justify-content-lg-center justify-content-center align-content-center">
+                    <div class="left position-relative col-9 col-lg-4 align-self-center">
+                        <img class="w-100" src="/imgs/chef11.jpg" width="350" height="auto" style="max-height:550px;"
+                            alt="">
+                        <div class="years-experience position-absolute text-white text-center rounded-circle bg-orange d-flex flex-column justify-content-center"
+                            style="top: -10px;right:-23px;outline: 10px solid white ; width: 100%; max-width: 140px;height: 100%;max-height: 140px; ">
+                            <h1 class="display-3 fw-bold mb-0">15+</h1>
+                            <p>Year Experience</p>
+                        </div>
+                        <div class="text position-absolute bottom-0 text-white w-75 "
+                            style="background-color: rgb(3, 3, 66);">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolorem maxime, officiis
+                                ipsa
+                                commodi deleniti!</p>
+                            <p>Yamen</p>
+                        </div>
                     </div>
-                    <h1>What We Do</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore saepe repellat optio, doloribus atque eos nemo? Inventore accusamus excepturi quasi, dicta, quaerat deserunt dignissimos natus ad hic expedita aliquid temporibus?</p>
+                    <div class="right col-11 col-lg-7 ps-lg-5">
+
+                        <p class="intro-secTitle d-flex align-items-center">
+                            <span>About Resturnat</span>
+                            <img src="/imgs/logo2.png" width="80" alt="">
+                        </p>
+                        <p class="text-black-50">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quis
+                            neque necessitatibus in dolorem voluptatibus tempora vitae nemo voluptas sapiente!</p>
+                        <div class="cards d-flex flex-column gap-3">
+                            <div class="d-flex align-items-center gap-1 justify-content-between">
+                                <img src="/imgs/about_check.png" width="70" alt="">
+                                <div>
+                                    <h5 class="mb-2">Trusted Partner</h5>
+                                    <p class="text-black-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+                                        accusamus, veniam eaque iure ullam saepe numquam nisi maiores iste nulla!</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 justify-content-between">
+                                <img src="/imgs/about_check.png" width="70" alt="">
+                                <div>
+                                    <h5 class="mb-2">Trusted Partner</h5>
+                                    <p class="text-black-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+                                        accusamus, veniam eaque iure ullam saepe numquam nisi maiores iste nulla!</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 justify-content-between">
+                                <img src="/imgs/about_check.png" width="70" alt="">
+                                <div>
+                                    <h5 class="mb-2">Trusted Partner</h5>
+                                    <p class="text-black-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+                                        accusamus, veniam eaque iure ullam saepe numquam nisi maiores iste nulla!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card-holder">
-                <img src="/static/imgs/chef44.jpg" style="width: 570px; height: 600px;" alt="">
+        </section>
+        <section class="tow">
+            <div class="container">
+                <div class="row">
+                    <div class="left col-7">
+                        <h2 class="display-4 fw-normal text-white">EASY ORDER IN 3 STEPS</h2>
+                        <h1 class="display-5 fw-normal text-white">How We Work</h1>
+                        <div class="cards d-flex gap-2">
+                            <div class="card">
+
+                                <div class="icon   rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width:110px ; height: 110px;">
+                                    <div class="inner-circle rounded-circle text-center d-flex align-items-center justify-content-center border border-2 border-white"
+                                        style="width:90px ; height: 90px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+                                            y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                            xml:space="preserve" width="50" height="50">
+                                            <g>
+                                                <polygon
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    points="
+          421,497 91,497 71,437 441,437    "></polygon>
+
+                                                <line
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    x1="15" y1="437" x2="497" y2="437"></line>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M465.4,436c-3.43-112.69-95.87-203-209.4-203S50.03,323.31,46.6,436"></path>
+
+                                                <line
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    x1="256" y1="197" x2="256" y2="230"></line>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M172.952,141c0,0,17.026-22.503,0-46.1s3.784-44.239,3.784-44.239"></path>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M254.971,105.34c0,0,17.026-22.503,0-46.1S258.754,15,258.754,15"></path>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M338.178,141c0,0,17.026-22.503,0-46.1c-17.026-23.597,3.784-44.239,3.784-44.239"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h4>explore menu</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut culpa eveniet molestias!
+                                </p>
+                            </div>
+                            <div class="card">
+
+                                <div class="icon  rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width:110px ; height: 110px;">
+                                    <div class="inner-circle rounded-circle text-center d-flex align-items-center justify-content-center border border-2 border-white"
+                                        style="width:90px ; height: 90px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+                                            y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                            xml:space="preserve" width="50" height="50">
+                                            <g>
+                                                <polygon
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    points="
+          421,497 91,497 71,437 441,437    "></polygon>
+
+                                                <line
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    x1="15" y1="437" x2="497" y2="437"></line>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M465.4,436c-3.43-112.69-95.87-203-209.4-203S50.03,323.31,46.6,436"></path>
+
+                                                <line
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    x1="256" y1="197" x2="256" y2="230"></line>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M172.952,141c0,0,17.026-22.503,0-46.1s3.784-44.239,3.784-44.239"></path>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M254.971,105.34c0,0,17.026-22.503,0-46.1S258.754,15,258.754,15"></path>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M338.178,141c0,0,17.026-22.503,0-46.1c-17.026-23.597,3.784-44.239,3.784-44.239"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h4>explore menu</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut culpa eveniet molestias!
+                                </p>
+                            </div>
+                            <div class="card">
+
+                                <div class="icon  rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width:110px ; height: 110px;">
+                                    <div class="inner-circle rounded-circle text-center d-flex align-items-center justify-content-center border border-2 border-white"
+                                        style="width:90px ; height: 90px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px"
+                                            y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                            xml:space="preserve" width="50" height="50">
+                                            <g>
+                                                <polygon
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    points="
+          421,497 91,497 71,437 441,437    "></polygon>
+
+                                                <line
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    x1="15" y1="437" x2="497" y2="437"></line>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M465.4,436c-3.43-112.69-95.87-203-209.4-203S50.03,323.31,46.6,436"></path>
+
+                                                <line
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    x1="256" y1="197" x2="256" y2="230"></line>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M172.952,141c0,0,17.026-22.503,0-46.1s3.784-44.239,3.784-44.239"></path>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M254.971,105.34c0,0,17.026-22.503,0-46.1S258.754,15,258.754,15"></path>
+                                                <path
+                                                    style="fill:none;stroke:white;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+                                                    d="
+          M338.178,141c0,0,17.026-22.503,0-46.1c-17.026-23.597,3.784-44.239,3.784-44.239"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h4>explore menu</h4>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut culpa eveniet molestias!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right col-5 text-center ">
+                        <img src="/imgs/blog3.jpg" class="rounded-circle " style="object-fit:cover;" width="500"
+                            height="500" alt="">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-</div> 
-<!-- end of chef section -->
-<!-- Demo styles -->
+        <footer class="pb-3 px-4">
+            <div class="container text-white">
+                <img src="/imgs/logo2.png" class="logo" alt="">
+                <div class="row justify-content-center">
+                    <div class="aboutUs col-12 col-lg-4 ">
+                        <p class="intro-secTitle">About Us</p>
+                        <p class="text-white-50 my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                            eius nihil illo sapiente deserunt quaerat!</p>
+                        <ul class="socail-media list-unstyled d-flex gap-3">
+                            <li><a class="text-decoration-none" href=""><i
+                                        class="border  border-1 rounded-circle fab fa-facebook-f"></i></a></li>
+                            <li><a class="text-decoration-none" href=""><i
+                                        class="border  border-1 rounded-circle fab fa-twitter"></i></a></li>
+                            <li><a class="text-decoration-none" href=""><i
+                                        class="border  border-1 rounded-circle fab fa-instagram"></i></a></li>
+                            <li><a class="text-decoration-none" href=""><i
+                                        class="border  border-1 rounded-circle fab fa-linkedin-in"></i></a></li>
+                            <li><a class="text-decoration-none" href=""><i
+                                        class="border  border-1 rounded-circle fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="openningHours col-12 col-lg-4">
+                        <p class="intro-secTitle">Hours</p>
+                        <div class="d-block d-sm-flex gap-sm-4 d-lg-block gap-5">
+                            <p class="text-white"><span class="orange fw-bold">Mon - Thus:</span> 9Am - 5Pm</p>
+                            <p class="text-white"><span class="orange fw-bold">Wen - Thu:</span> 9Am - 5Pm</p>
+                            <p class="text-white"><span class="orange fw-bold">Fri - Sat:</span> 10Am - 4Pm</p>
+                            <p class="text-white"><span class="orange fw-bold">Sun:</span> 10Am - 6Pm</p>
+                        </div>
+                    </div>
+
+                    <div class="lastUpdates col-12 col-lg-4">
+                        <p class="intro-secTitle">Lastest Posts</p>
+                        <div class="row gap-1 mb-3">
+                            <div class="col-3 postImg postImg1"></div>
+                            <div class="col-8">
+                                <p>Assertively viusalize best-of-breed customers.</p>
+                                <p class="text-white-50"><i class="fas fa-calendar-alt"></i> 05 June, 2022</p>
+                            </div>
+                        </div>
+                        <div class="row gap-2">
+                            <div class="col-3 postImg postImg2"></div>
+                            <div class="col-8">
+                                <p>Assertively viusalize best-of-breed customers.</p>
+                                <p class="text-white-50"><i class="fas fa-calendar-alt"></i> 05 June, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
 
 
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- index.js -->
+<script src="/js/index.js"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: false,
+    });
+</script>
 
 
+<!-- swiper js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 00,
+            stretch: 0,
+            depth: 100,
+            modifier: 10,
+            slideShadows: true,
+        },
+        // loop:true,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+</script>
 
-
-
-
-
-
-
-
-
-
-
-<style>
-.about-us{
-    padding: 50px 0;
-    margin-top: 50px;
-    background-image: url(/static/imgs/test13.jpg);
-    background-size: cover;
-    background-position: right;
-}
-.intro-text p{
-    margin: 0 auto;
-    max-width: 600px;
-}
-.swiper {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    max-width: 550px;
-    width: 100%;
-    max-height: 550px;
-    height: 100%;
-}
-.swiper-slide-prev{
-    transform: rotateX(120deg);
-}
-.swiper-slide-active{
-    outline: 10px solid orange;
-}
-.swiper-slide img {
-    display: block;
-    width: 100%;
-}
-.card{
-    max-width: 600px;
-    height: 400px;
-    left: 150px;
-    bottom: 50px;
-    z-index: 100;
-}
-</style>
-{% include 'footer.html' %}
-{% endblock body %}
+</html>

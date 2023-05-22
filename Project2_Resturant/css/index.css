@@ -42,7 +42,7 @@
     padding: 80px 0;
     min-height: 100vh;
     width: 100%;
-    background-image: url(/static/imgs/simplemanuback.jpg);
+    background-image: url(/imgs/simplemanuback.jpg);
     background-size: cover;
     background-position: right bottom;
     /* background-color: white; */
@@ -80,11 +80,11 @@
     background-position: center ;
 }
 .DiscoverStory .row .left .img:first-child{
-    background-image: url(/static/imgs/simplemenu21.jpg);
+    background-image: url(/imgs/simplemenu21.jpg);
 }
 
 .DiscoverStory .row .left .img:last-child{
-    background-image: url(/static/imgs/Discoverimg2.jpg);
+    background-image: url(/imgs/Discoverimg2.jpg);
     margin-top: 30px;
     outline: 10px solid rgb(221, 144, 0);
     right: 40px;
@@ -94,7 +94,7 @@
     width: 100%;
     height: 60px;
     margin: 0 auto;
-    background-image: url(/static/imgs/HorizontalLine.png);
+    background-image: url(/imgs/HorizontalLine.png);
     background-size: cover;
     background-position: center;
     /* background-color:red; */
@@ -106,20 +106,20 @@
     background-position: center;
 }
 .DiscoverStory .rigth .row .left-logo #logoitems1{
-    background-image: url(/static/imgs/logoitmes1.png);
+    background-image: url(/imgs/logoitmes1.png);
 }
 .DiscoverStory .rigth .row .left-logo #logoitems2{
-    background-image: url(/static/imgs/logoitems2.png);
+    background-image: url(/imgs/logoitems2.png);
 }
 .DiscoverStory .rigth .row .left-logo #logoitems3{
-    background-image: url(/static/imgs/logoitems3.png);
+    background-image: url(/imgs/logoitems3.png);
 }
 
 
 .reservtion{
     margin: 100px 0;
     min-height: 80vh;
-    background-image: url(/static/imgs/test.jpg);
+    background-image: url(/imgs/test.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -149,7 +149,7 @@
 .Comments{
     margin: 100px 0 50px;
     height: 75vh;
-    background-image: url(/static/imgs/test2.jpg);
+    background-image: url(/imgs/test2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -199,33 +199,33 @@
 .Comments .leftBubbles  .Bigbubble{
     animation: rotate1 5s ease-in infinite ;
     top: 50px;
-    background-image: url(/static/imgs/commentspeople1.jpg);
+    background-image: url(/imgs/commentspeople1.jpg);
 }
 .Comments .leftBubbles .mediumbubble{
     top: 230px;
     animation: rotate2 5s ease-in infinite reverse;
-    background-image: url(/static/imgs/commentspeople2.jpg);
+    background-image: url(/imgs/commentspeople2.jpg);
 
 }
 .Comments .leftBubbles .smallbubble{
     top: 370px;
     animation: rotate3 6s ease-in infinite;
-    background-image: url(/static/imgs/commentspeople3.jpg);
+    background-image: url(/imgs/commentspeople3.jpg);
     background-position: left;
 
 }
 .Comments .rigthbubbles  .Bigbubble{
     animation: rotate4 8s ease-in infinite ;
-    background-image: url(/static/imgs/commentspeople4.jpg);
+    background-image: url(/imgs/commentspeople4.jpg);
     top: 310px;
 }
 .Comments .rigthbubbles .mediumbubble{
     animation: rotate5 5s ease-in infinite ;
-    background-image: url(/static/imgs/commentspeople5.jpg);
+    background-image: url(/imgs/commentspeople5.jpg);
     top: 150px;
 }
 .Comments .rigthbubbles .smallbubble{
-    background-image: url(/static/imgs/commentspeople6.jpg);
+    background-image: url(/imgs/commentspeople6.jpg);
     top: 50px;
     animation: rotate6 5s ease-in infinite reverse;
 }

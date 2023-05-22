@@ -21,7 +21,9 @@ h1 {
 .orange {
     color: rgb(220, 144, 5);
 }
-
+.bg-orange{
+    background-color: rgb(251, 171, 23);
+}
 .savinglayer {
     background-color: white;
     padding: 50px 0 0;
