@@ -2,12 +2,14 @@
     padding: 50px 0 0;
     margin-top: 50px;
 }
-section.tow{
-    min-height: 90vh;
+
+section.tow {
+    min-height: 80vh;
     padding: 100px 0;
     position: relative;
 }
-section.tow::before{
+
+section.tow::before {
     content: '';
     position: absolute;
     width: 80%;
@@ -19,6 +21,7 @@ section.tow::before{
     top: 0;
     z-index: -1;
 }
+
 section.tow .left .card {
     background-color: transparent;
     color: white;
@@ -27,6 +30,121 @@ section.tow .left .card {
 
     /* max-width: 200px; */
 }
-section.tow .left .card .icon{
+
+section.tow .left .card .icon {
     /* max-width: 200px; */
+}
+
+section.three {
+    min-height: 50vh;
+    padding: 40px 0;
+}
+
+section.three .left .card {
+    height: 150px;
+    width: min(100%, 350px);
+    border-left: 6px solid orangered;
+    border-radius: 5px 0 0 5px 0;
+    transform: skewX(-10deg);
+}
+
+section.three .left .card .icon {
+    border-radius: 50%;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-content: center;
+    background-color: orangered;
+    color: white;
+}
+
+section.four {
+    min-height: 80vh;
+    padding: 100px 0;
+    position: relative;
+    background-image: url(/imgs/reverstion1.jpg);
+    background-position: bottom;
+}
+
+section.four::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(10, 10, 10, 0.385);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+section.four .box{
+    width: min(100% ,300px);
+    position: relative;
+    z-index: 1;
+}
+section.four .circle {
+    width: min(100%, 260px);
+    height: 260px;
+    border-radius: 50%;
+    padding: 10px;
+    border-left: 2px solid white;
+    border-top: 2px solid rgba(255, 255, 255, 0);
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    border-right: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: transparent;
+    color: white;
+    animation: rotate 4s .2s ease infinite;
+}
+
+section.four .circle .inner-circle {
+    width: min(100%, 240px);
+    height: 240px;
+    background-color: rgba(252, 105, 6, 0.456);
+    border-radius: 50%;
+    border-left: 5px solid white;
+    border-top: 5px solid rgba(255, 255, 255, 0);
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid white;
+    /* animation: rotate 0.5s .2s ease; */
+
+}
+section.four .counter-circle{
+    color: red;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+section.four p {
+
+}
+
+
+section.four .icon {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: red;
+
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+        background-color: red;
+    }
+    100%{
+        background-color: blue;
+        transform: rotate(360deg);
+    }
 }
