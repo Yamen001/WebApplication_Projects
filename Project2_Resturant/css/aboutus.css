@@ -1,51 +1,86 @@
-.about-us {
-    padding: 50px 0 0;
-    margin-top: 50px;
+p {
+    margin: 0;
 }
 
+.about-us {
+    padding: 60px 0 0;
+}
+
+section {
+    margin: 50px 0;
+    padding: 0 10px;
+    overflow-x: hidden;
+}
+
+
+
+/** start of section one ////////////////////////////////////////////// */
+section.one .years-experience {
+    max-width: 140px;
+    width: 100%;
+    height: 100%;
+    max-height: 140px;
+}
+
+section.one .text {
+    left: 30%;
+    bottom: 30px;
+    background-color: rgb(20, 20, 104);
+
+}
+
+/** end of section one ////////////////////////////////////////////// */
+
+
+/** start of section tow ////////////////////////////////////////////// */
 section.tow {
     min-height: 80vh;
-    padding: 100px 0;
-    position: relative;
+    padding: 40px 0;
 }
 
 section.tow::before {
     content: '';
     position: absolute;
-    width: 80%;
+    width:100%;
     height: 100%;
     background-image: url(/imgs/about-patron.jpg);
     background-size: contain;
-    border-radius: 0 50% 50% 0;
+    border-radius:  0;
     left: 0;
     top: 0;
     z-index: -1;
 }
 
 section.tow .left .card {
-    background-color: transparent;
-    color: white;
-    background-color: rgb(239, 61, 61);
-    padding: 10px;
-
-    /* max-width: 200px; */
+    background-color:  rgb(79, 79, 171);
+    padding: 13px;
+    min-height: 270px;
+    max-width: 280px;
+    width: 100%;
+}
+section.tow img {
+    height: 400px;
+    max-width: 400px;
+    width: 100%;
 }
 
-section.tow .left .card .icon {
-    /* max-width: 200px; */
-}
+/** end of section tow ////////////////////////////////////////////// */
+
+
+/** start of section three ////////////////////////////////////////////// */
 
 section.three {
     min-height: 50vh;
-    padding: 40px 0;
 }
 
 section.three .left .card {
     height: 150px;
     width: min(100%, 350px);
-    border-left: 6px solid orangered;
+    border: 1px solid #ccc;
+    border-left: 6px solid rgb(255, 162, 0);
     border-radius: 5px 0 0 5px 0;
     transform: skewX(-10deg);
+    background-color: #fcfcfc;
 }
 
 section.three .left .card .icon {
@@ -55,16 +90,24 @@ section.three .left .card .icon {
     transform: translateY(-50%);
     display: grid;
     place-content: center;
-    background-color: orangered;
+    background-color: rgb(255, 162, 0);
     color: white;
 }
+section.three .right img{
+    max-width: 500px;
+    width: 100%;
+}
+
+/** end of section three ////////////////////////////////////////////// */
+
 
 section.four {
     min-height: 80vh;
     padding: 100px 0;
     position: relative;
-    background-image: url(/imgs/reverstion1.jpg);
-    background-position: bottom;
+    background-image: url(/imgs/landingfood3.png);
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 section.four::before {
@@ -72,56 +115,65 @@ section.four::before {
     position: absolute;
     left: 0;
     top: 0;
-    background-color: rgba(10, 10, 10, 0.385);
+    background-color: rgba(0, 0, 0, 0.307);
     width: 100%;
     height: 100%;
     z-index: 0;
 }
-section.four .box{
-    width: min(100% ,300px);
+
+section.four .box {
+    width: min(100%, 300px);
     position: relative;
     z-index: 1;
 }
+
 section.four .circle {
-    width: min(100%, 260px);
-    height: 260px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    padding: 10px;
-    border-left: 2px solid white;
-    border-top: 2px solid rgba(255, 255, 255, 0);
-    border-bottom: 2px solid rgba(255, 255, 255, 0);
-    border-right: 2px solid white;
+    position: relative;
+    background-color: rgba(255, 123, 0, 0.796);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background-color: transparent;
-    color: white;
-    animation: rotate 4s .2s ease infinite;
 }
 
 section.four .circle .inner-circle {
-    width: min(100%, 240px);
-    height: 240px;
-    background-color: rgba(252, 105, 6, 0.456);
+    width: 230px;
+    height: 230px;
+    /* transform: translate(-50% , -50%); */
+    /* background-color: rgb(255, 255, 0); */
     border-radius: 50%;
-    border-left: 5px solid white;
-    border-top: 5px solid rgba(255, 255, 255, 0);
-    border-bottom: 5px solid rgba(255, 255, 255, 0);
-    border-right: 5px solid white;
-    /* animation: rotate 0.5s .2s ease; */
+    animation: rotate 30s linear infinite;
+    position: absolute;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+    border-top: 4px solid rgba(255, 255, 255, 0);
+    border-bottom: 4px solid rgba(255, 255, 255, 0);
+
 
 }
-section.four .counter-circle{
-    color: red;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
+
+section.four .circle .outer-circle {
+    width: 260px;
+    height: 260px;
+    /* background-color: rgba(144, 0, 255, 0.422); */
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+    position: absolute;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid rgba(255, 255, 255, 0);
+    border-right: 1px solid rgba(255, 255, 255, 0);
+
 }
+
+section.four .counter-circle {}
+
 section.four p {
-
+    font-size: 2.4rem;
+    color: white;
+    font-weight: bold;
 }
 
 
@@ -133,18 +185,122 @@ section.four .icon {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: red;
+    background-color: rgb(255, 0, 0);
 
 }
 
 
 @keyframes rotate {
-    0%{
+    0% {
         transform: rotate(0deg);
-        background-color: red;
+        /* background-color: red; */
     }
-    100%{
-        background-color: blue;
+
+    100% {
+        /* background-color: blue; */
         transform: rotate(360deg);
+    }
+}
+
+
+
+.all-chefs .horizontalLine {
+    max-width: 500px;
+    height: 60px;
+    background-image: url(/imgs/HorizontalLine.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.all-chefs .chef {
+    height: 500px;
+    width: 350px;
+    box-shadow: 0 5px 10px #aaa;
+}
+
+.all-chefs .chef .chef-img {
+    /* width: 100%; */
+    background-size: 110%;
+    background-position: center;
+    transition: .6s ease;
+    background-repeat: no-repeat;
+}
+
+.all-chefs .chef .chef-img:hover {
+    background-size: 120%;
+}
+
+.all-chefs .chef1 {
+    background-image: url(/imgs/chef11.jpg);
+}
+
+.all-chefs .chef2 {
+    background-image: url(/imgs/chef22.jpg);
+}
+
+.all-chefs .chef3 {
+    background-image: url(/imgs/chef66.jpg);
+}
+
+.all-chefs .chef-detail2 {
+    position: relative;
+}
+
+.all-chefs .chef-detail2::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 100%;
+    background-color: orange;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.socail-media li a i {
+    color: orange;
+}
+
+
+
+
+/** start of media Qureis ////////////////////////////////////////////// */
+@media (max-width:575px) {
+    p {
+        font-size: 13px;
+    }
+    section.one .years-experience {
+        max-width: 120px;
+        width: 100%;
+        height: 100%;
+        max-height: 120px;
+    }
+
+    section.one .text {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+
+
+    section.tow img {
+        height: 300px;
+        max-width: 300px;
+        width: 100%;
+    }
+}
+
+@media (min-width:576px) and (max-width:786px) {
+    p {
+        font-size: 15px;
+    }
+}
+@media (min-width:789px) {
+    section.tow{
+        padding: 100px 0;
+    }
+    section.tow::before {
+        width: 80%;
+        border-radius: 0 50% 50% 0;
     }
 }

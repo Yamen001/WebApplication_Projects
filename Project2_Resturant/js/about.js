@@ -1,19 +1,21 @@
-console.log('test')
-
-let btn = document.querySelector("button.test")
 let state = false
 let countres = document.querySelectorAll(".counter-circle span")
 console.log(countres)
-btn.addEventListener("click",()=>{
-    if(!state){
+let timerSection = document.querySelector(".timer-section")
+console.log(timerSection.getBoundingClientRect().top)
+
+
+window.addEventListener('scroll',()=>{
+    console.log(window.scrollY)
+    if(window.scrollY> timerSection.getBoundingClientRect().top - 200  && !state){
+        console.log('onnnnnn')
+        state = true
         console.log(countres)
         countres.forEach((e)=>{
             let goal = e.parentElement.getAttribute("counter-data")
             startCount(e, goal)
         })
     }
-    console.log("hello")
-    state = true
 })
 
 
