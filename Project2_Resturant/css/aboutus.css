@@ -34,7 +34,7 @@ section.one .text {
 
 /** start of section tow ////////////////////////////////////////////// */
 section.tow {
-    min-height: 80vh;
+    min-height: 60vh;
     padding: 40px 0;
 }
 
@@ -75,7 +75,7 @@ section.three {
 
 section.three .left .card {
     height: 150px;
-    width: min(100%, 350px);
+    width: min(100%, 450px);
     border: 1px solid #ccc;
     border-left: 6px solid rgb(255, 162, 0);
     border-radius: 5px 0 0 5px 0;
@@ -100,12 +100,12 @@ section.three .right img{
 
 /** end of section three ////////////////////////////////////////////// */
 
-
+/** start of section four ////////////////////////////////////////////// */
 section.four {
-    min-height: 80vh;
+    min-height: 50vh;
     padding: 100px 0;
     position: relative;
-    background-image: url(/imgs/landingfood3.png);
+    background-image: url(/imgs/compresed/landingfood3-min.png);
     background-repeat: no-repeat;
     background-position: top;
 }
@@ -132,17 +132,14 @@ section.four .circle {
     height: 200px;
     border-radius: 50%;
     position: relative;
-    background-color: rgba(255, 123, 0, 0.796);
+    background-color: rgba(20, 20, 104, 0.549);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 section.four .circle .inner-circle {
     width: 230px;
     height: 230px;
-    /* transform: translate(-50% , -50%); */
-    /* background-color: rgb(255, 255, 0); */
     border-radius: 50%;
     animation: rotate 30s linear infinite;
     position: absolute;
@@ -150,14 +147,10 @@ section.four .circle .inner-circle {
     border-right: 4px solid white;
     border-top: 4px solid rgba(255, 255, 255, 0);
     border-bottom: 4px solid rgba(255, 255, 255, 0);
-
-
 }
-
 section.four .circle .outer-circle {
     width: 260px;
     height: 260px;
-    /* background-color: rgba(144, 0, 255, 0.422); */
     border-radius: 50%;
     animation: rotate 20s linear infinite;
     position: absolute;
@@ -167,16 +160,9 @@ section.four .circle .outer-circle {
     border-right: 1px solid rgba(255, 255, 255, 0);
 
 }
-
-section.four .counter-circle {}
-
 section.four p {
     font-size: 2.4rem;
-    color: white;
-    font-weight: bold;
 }
-
-
 section.four .icon {
     position: absolute;
     bottom: -30px;
@@ -185,7 +171,7 @@ section.four .icon {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: rgb(255, 0, 0);
+    background-color: rgba(255, 106, 0, 0.904);
 
 }
 
@@ -201,6 +187,7 @@ section.four .icon {
         transform: rotate(360deg);
     }
 }
+/** end of section four ////////////////////////////////////////////// */
 
 
 
@@ -288,6 +275,11 @@ section.four .icon {
         max-width: 300px;
         width: 100%;
     }
+
+
+    section.three .left .card {
+    transform: skewX(0);
+}
 }
 
 @media (min-width:576px) and (max-width:786px) {
